@@ -53,15 +53,15 @@ if(isset($_REQUEST["SK"])){
 			 
 			 <table width="1065" height="80%"  align="center" border="0" cellpadding="0" cellspacing="0">
 			 	<tr>
-				 	<td width="192"><img src="Resimler/Logo.png"></td>
+				 	<td width="192"><a href="index.php?"><img src="Resimler/<?php echo DonusumleriGeriDondur($SiteLogosu)?>"border="0"><a/></td>
 					<td>
 					
 						<table width="873" height="30%"  align="center" border="0" cellpadding="0" cellspacing="0">
 			 	<tr>
 					<td width="523" class="AnaMenu">&nbsp;</td>
-				 	<td width="100" class="AnaMenu"><a href="index.php?Sk=0">Anasayfa<a/></td>
-					<td width="130" class="AnaMenu"><a href="index.php?SK=1">Kayısı Çeşitleri<a/></td>
-					<td width="120" class="AnaMenu"><a href="index.php?SK=2">Kuruyemiş<a/></td>
+				 	<td width="100" class="AnaMenu"><a href="index.php?">Anasayfa<a/></td>
+					<td width="130" class="AnaMenu"><a href="xxxxx">Kayısı Çeşitleri<a/></td>
+					<td width="120" class="AnaMenu"><a href="xxxxx">Kuruyemiş<a/></td>
 					<td></td>
 							
 				 </tr>
@@ -87,7 +87,7 @@ if(isset($_REQUEST["SK"])){
 					}
 					
 					
-					?></td>
+					?><br /></td>
 							
 				 </tr>
 			 
@@ -98,7 +98,7 @@ if(isset($_REQUEST["SK"])){
 		 
 		<tr height="210">
 
-<table width="1065"   align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#F9F9F9"> 
+		<table width="1065"   align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#F9F9F9"> 
 			 	<tr height="30">
 					<td width="250" style="border-bottom: 1px dashed #CCCCCC;"><b>&nbsp;Kurumsal</b></td>
 					<td width="22">&nbsp;</td>
@@ -111,16 +111,24 @@ if(isset($_REQUEST["SK"])){
 				 </tr>
 			 
 			 <tr height="30">
-					<td class="AltMenu">&nbsp;<a href="xxxxx">Hakkımızda<a/></td>
+					<td class="AltMenu">&nbsp;<a href="index.php?SK=1">Hakkımızda<a/></td>
 					<td>&nbsp;</td>
 					<td class="AltMenu"><a href="xxxxx">Giriş Yap<a/></td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">Üyelik Sözleşmesi<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=2">Üyelik Sözleşmesi<a/></td>
 					<td>&nbsp;</td>
 					<td ><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
+						
+						
+						
+						
+						
+						
+						
+
 						<tr>
 						<td width="20"><a href="xxxxx"><img src="Resimler/Facebook16x16.png" border="0" style="margin-top:5px;"<a/></td>
-							<td width="230" class="AltMenu"><a href="xxxxx">Facebook<a/></td>
+							<td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkFacebook)?>"target="_blank">Facebook<a/></td>
 						</tr>
 	</table></td>					
 							
@@ -130,12 +138,12 @@ if(isset($_REQUEST["SK"])){
 					<td>&nbsp;</td>
 					<td class="AltMenu"><a href="xxxxx">Yeni Üye Ol<a/></td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">Kullanım Koşulları<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=3">Kullanım Koşulları<a/></td>
 					<td>&nbsp;</td>
 					<td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 						<td width="20"><a href="xxxxx"><img src="Resimler/Twitter16x16.png" border="0" style="margin-top:5px;"<a/></td>
-							<td width="230" class="AltMenu"><a href="xxxxx">Twitter<a/></td>
+							<td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkTwitter)?>"target="_blank">Twitter<a/></td>
 						</tr>
 	</table></td>					
 							
@@ -145,12 +153,12 @@ if(isset($_REQUEST["SK"])){
 					<td>&nbsp;</td>
 					<td class="AltMenu"><a href="xxxxx">Sık Sorulan Sorular<a/></td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">Gizlilik Sözleşmesi<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=4">Gizlilik Sözleşmesi<a/></td>
 					<td>&nbsp;</td>
 					<td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 						<td width="20"><a href="xxxxx"><img src="Resimler/Instagram16x16.png" border="0" style="margin-top:5px;"<a/></td>
-							<td width="230" class="AltMenu"><a href="xxxxx">İnstagram<a/></td>
+							<td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkInstagram)?>"target="_blank">İnstagram<a/></td>
 						</tr>
 	</table></td>					
 							
@@ -160,12 +168,12 @@ if(isset($_REQUEST["SK"])){
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">Mesafeli Satış Sözleşmesi<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=5">Mesafeli Satış Sözleşmesi<a/></td>
 					<td>&nbsp;</td>
 					<td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 						<td width="20"><a href="xxxxx"><img src="Resimler/LinkedIn16x16.png" border="0" style="margin-top:5px;"<a/></td>
-							<td width="230" class="AltMenu"><a href="xxxxx">Linkedin<a/></td>
+							<td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkLinkedin)?>"target="_blank">Linkedin<a/></td>
 						</tr>
 	</table></td>					
 							
@@ -175,12 +183,12 @@ if(isset($_REQUEST["SK"])){
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">Teslimat<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=6">Teslimat<a/></td>
 					<td>&nbsp;</td>
 					<td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 						<td width="20"><a href="xxxxx"><img src="Resimler/Pinterest16x16.png" border="0"<a/></td>
-							<td width="230" class="AltMenu"><a href="xxxxx">Pinterest<a/></td>
+							<td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkPinterest)?>"target="_blank">Pinterest<a/></td>
 						</tr>
 	</table></td>					
 							
@@ -190,12 +198,12 @@ if(isset($_REQUEST["SK"])){
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">İptal & İade & Değişim<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=7">İptal & İade & Değişim<a/></td>
 					<td>&nbsp;</td>
 					<td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 						<td width="20"><a href="xxxxx"><img src="Resimler/YouTube16x16.png" border="0" style="margin-top:5px;"<a/></td>
-							<td width="230" class="AltMenu"><a href="xxxxx">Youtube<a/></td>
+						<td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkYoutube)?>"target="_blank">Youtube<a/></td>
 						</tr>
 	</table></td>					
 							
@@ -207,7 +215,7 @@ if(isset($_REQUEST["SK"])){
 		 
 		 <tr height="30">
 		 <td><table width="1065" height="30"   align="center" border="0" cellpadding="0" cellspacing="0"> 
-			 	<tr >
+			 	<tr>
 					<td align="center"><?php echo  DonusumleriGeriDondur($SiteCopyrightMetni)?></td>
 							
 				 </tr>
@@ -225,11 +233,6 @@ if(isset($_REQUEST["SK"])){
 			</table> </td>
 		 </tr>
 
-		 
-		 
-		 
-		 
-		 
 		 
 	</table>	 
  </body>	

@@ -1,8 +1,12 @@
 <?php
 $Sayfa[0]="anasayfa.php";
-$Sayfa[1]="kayisicesitleri.php";
-$Sayfa[2]="kuruyemis.php";
-$Sayfa[3]="";
-$Sayfa[4]="";
-$Sayfa[5]="";
+$Sayfa[1]="hakkimizda.php";
+$Sayfa[2]="uyeliksozlesmesi.php";
+$Sayfa[3]="kullanimkosullari.php";
+$Sayfa[4]="gizliliksozlesmesi.php";
+$Sayfa[5]="mesafelisatissozlesmesi.php";
+$Sayfa[6]="teslimat.php";
+$Sayfa[7]="iptaliadedegisim.php";
+$Sayfa[8]="";
+
 ?>
