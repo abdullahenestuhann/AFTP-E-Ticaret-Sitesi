@@ -1,6 +1,6 @@
 <?php
 try{
-	$VeritabaniBaglantisi = new PDO("mysql:host=localhost;dbname=aftp-e-ticaret-sitesi;charset=UTF-8","root","");
+	$VeritabaniBaglantisi = new PDO("mysql:host=localhost;dbname=aftp-e-ticaret-sitesi;charset=UTF8","root","");
 }catch(PDOException $Hata ){
 	//echo "Bağlantı Hatası <br />". $Hata->getMessage();
 	die();
