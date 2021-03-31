@@ -24,7 +24,7 @@ function DonusumleriGeriDondur($Deger){
 function Guvenlik($Deger){
 	$BoslukSil      = trim($Deger);
 	$TaglariTemizle = strip_tags($BoslukSil);
-	$EtkisizYap     = htmlspecialchars($TaglariTemizle);
+	$EtkisizYap     = htmlspecialchars($TaglariTemizle,ENT_QUOTES);
 	$Sonuc          = $EtkisizYap ;
 	
 	return $Sonuc;
@@ -34,7 +34,7 @@ function Guvenlik($Deger){
 function SayiliIcerikleriFiltrele($Deger){
 	$BoslukSil      = trim($Deger);
 	$TaglariTemizle = strip_tags($BoslukSil);
-	$EtkisizYap     = htmlspecialchars($TaglariTemizle);
+	$EtkisizYap     = htmlspecialchars($TaglariTemizle,ENT_QUOTES);
 	$Temizle		= RakamlarHaricTumKarekterleriSil($EtkisizYap);
 	$Sonuc          = $Temizle ;
 	

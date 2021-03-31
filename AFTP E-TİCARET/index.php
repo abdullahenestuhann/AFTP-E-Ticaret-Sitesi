@@ -59,7 +59,7 @@ if(isset($_REQUEST["SK"])){
 						<table width="873" height="30%"  align="center" border="0" cellpadding="0" cellspacing="0">
 			 	<tr>
 					<td width="523" class="AnaMenu">&nbsp;</td>
-				 	<td width="100" class="AnaMenu"><a href="index.php?">Anasayfa<a/></td>
+				 	<td width="100" class="AnaMenu"><a href="index.php?SK=0">Anasayfa<a/></td>
 					<td width="130" class="AnaMenu"><a href="xxxxx">Kayısı Çeşitleri<a/></td>
 					<td width="120" class="AnaMenu"><a href="xxxxx">Kuruyemiş<a/></td>
 					<td></td>
@@ -97,8 +97,8 @@ if(isset($_REQUEST["SK"])){
 		 
 		 
 		<tr height="210">
-
-		<table width="1065"   align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#F9F9F9"> 
+			 <td valign="top">
+		<table   width="1065"    align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#F9F9F9"> 
 			 	<tr height="30">
 					<td width="250" style="border-bottom: 1px dashed #CCCCCC;"><b>&nbsp;Kurumsal</b></td>
 					<td width="22">&nbsp;</td>
@@ -149,7 +149,7 @@ if(isset($_REQUEST["SK"])){
 							
 				 </tr>
 			  <tr height="30">
-					<td class="AltMenu"><a href="xxxxx">&nbsp;Havale Bildirim Fonu<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=9">&nbsp;Havale Bildirim Fonu<a/></td>
 					<td>&nbsp;</td>
 					<td class="AltMenu"><a href="xxxxx">Sık Sorulan Sorular<a/></td>
 					<td>&nbsp;</td>
