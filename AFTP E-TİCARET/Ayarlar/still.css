@@ -87,3 +87,26 @@ html,body{
 	color: black;
 	cursor: pointer;
 }
+.KargoTakipInputu{
+	width: 75%;
+	height: 32px;
+	padding: 0px 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+.KargoTakipButonu{
+	height: 30px;
+	border: 1px solid #000000;
+	background: #ED910D;
+	padding:  5px 30px;
+	color: white;
+}
+.KargoTakipButonu:hover{
+	height: 30px;
+	border: 1px solid #ED910D;
+	background: #FF6E00 ;
+	padding:  5px 30px;
+	color: brown;
+	cursor: pointer;
+}
