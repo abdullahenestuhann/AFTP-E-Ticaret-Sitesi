@@ -41,7 +41,7 @@
 			$BankaKayitlari  = $BankalarSorgusu->fetchAll(PDO::FETCH_ASSOC);
 			foreach($BankaKayitlari as $Bankalar){
 ?>
-			<option value="<?php echo $Bankalar["id"];?>"><?php echo $Bankalar["BankaAdi"];?></option>
+			<option value="<?php echo $Bankalar["id"];?>"><?php echo DonusumleriGeriDondur($Bankalar["BankaAdi"]);?></option>
 			<?php
 				}
 			?>
@@ -88,9 +88,10 @@
 		<tr height="30">
 		<td colspan="2" align="left">Müşteri tarafından öncelikle banka hesaplarımız sayfasından bulunan herhangi bir hesaba ödeme işlemi gerçekleştirilir.</td>	
 		 </tr>
+		<tr>
 		
 		<td  colspan="2">&nbsp;</td>
-		
+		</tr>
 		
 	 <tr height="30">
 		<td align="left" width="30"><img src="Resimler/DokumanKirmiziKalemli20x20.png" border="0" style="margin-top: 3px;"</td>
@@ -101,9 +102,9 @@
 		<td colspan="2" align="left">Ödeme işleminizi tamamladıktan sonra "Havale Bildirim Formu" sayfasından müşteri yapmış olduğu ödeme için bildirim formunu doldurarak online olarak gönderir.</td>	
 		 </tr>
 		
-		
+		<tr>
 		<td  colspan="2">&nbsp;</td>
-		
+		</tr>
 		
 	 <tr height="30">
 		<td align="left" width="30"><img src="Resimler/CarklarSiyah20x20.png" border="0" style="margin-top: 3px;"</td>
@@ -114,8 +115,9 @@
 		<td colspan="2" align="left">"Havale Bildirim Formu"'nuz tarafımıza ulaştığı anda ilgili departman tarafından yapmış olduğunuz Havale / EFT işlemi ilgili banka üszerinden kontrol edilir.</td>	
 		 </tr>
 		
+	<tr>
 		<td  colspan="2">&nbsp;</td>
-		
+		</tr>
 		
 	 <tr height="30">
 		<td align="left" width="30"><img src="Resimler/InsanlarSiyah20x20.png" border="0" style="margin-top: 3px;"</td>
@@ -125,9 +127,9 @@
 		<tr height="30">
 		<td colspan="2" align="left">Havale bildirimi geçerli ise yani hesaba ödeme geçmiş ise , yönetici ilgili ödeme onayını vererek, siparişiniz teslimat birimine iletilir.</td>	
 		 </tr>
-		
+		<tr>
 		<td  colspan="2">&nbsp;</td>
-		
+		</tr>
 		
 	 <tr height="30">
 		<td align="left" width="30"><img src="Resimler/SaatEsnetikGri20x20.png" border="0" style="margin-top: 3px;"</td>

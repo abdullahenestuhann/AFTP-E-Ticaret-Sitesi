@@ -20,6 +20,7 @@ if($AyarSayisi>0){
 	$SiteLogosu                = $Ayarlar["SiteLogosu"];
 	$SiteEmailAdresi           = $Ayarlar["SiteEmailAdresi"];
 	$SiteEmailSifresi          = $Ayarlar["SiteEmailSifresi"];
+	$SiteEmailHostAdresi       = $Ayarlar["SiteEmailHostAdresi"];
 	$SosyalLinkFacebook        = $Ayarlar["SosyalLinkFacebook"];
 	$SosyalLinkTwitter         = $Ayarlar["SosyalLinkTwitter"];
 	$SosyalLinkLinkedin        = $Ayarlar["SosyalLinkLinkedin"];
