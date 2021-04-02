@@ -20,7 +20,7 @@ $Sayfa[17]="iletisimsonuc.php";
 $Sayfa[18]="iletisimsonuctamam.php";
 $Sayfa[19]="iletisimsonuchata.php";
 $Sayfa[20]="iletisimsonuceksikalan.php";
-$Sayfa[21]=".php";
+$Sayfa[21]="destek.php";
 $Sayfa[22]=".php";
 
 
