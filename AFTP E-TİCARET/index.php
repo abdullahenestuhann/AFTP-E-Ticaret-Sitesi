@@ -1,4 +1,5 @@
 <?php
+session_start(); ob_start();
 require_once("Ayarlar/ayar.php");	
 require_once("Ayarlar/fonksiyonlar.php");
 require_once("Ayarlar/SiteSayfalari.php");
@@ -45,7 +46,7 @@ if(isset($_REQUEST["SK"])){
 					<td width="20"><a href="xxxxx"><img src="Resimler/KullaniciBeyaz16x16.png" border="0" style="margin-top:5px;"></a></td>
 					<td width="70" class="MaviAlanMenusu"><a href="xxxxx">Giriş Yap</a></td>
 					<td width="20"><a href="xxxxx"><img src="Resimler/KullaniciEkleBeyaz16x16.png" border="0" style="margin-top:5px;"></a></td>
-					<td width="85" class="MaviAlanMenusu"><a href="xxxxx">Yeni Üye Ol</a></td>
+					<td width="85" class="MaviAlanMenusu"><a href="index.php?SK=22">Yeni Üye Ol</a></td>
 					<td width="20"><a href="xxxxx"><img src="Resimler/SepetBeyaz16x16.png"border=0 style="margin-top:5px;"></a></td>
 					<td width="103" class="MaviAlanMenusu"><a href="xxxxx">Alışveriş Sepeti</a></td>		
 				 </tr>
@@ -136,7 +137,7 @@ if(isset($_REQUEST["SK"])){
 			  <tr height="30">
 					<td class="AltMenu">&nbsp;<a href="index.php?SK=8">Banka Hesapları<a/></td>
 					<td>&nbsp;</td>
-					<td class="AltMenu"><a href="xxxxx">Yeni Üye Ol<a/></td>
+					<td class="AltMenu"><a href="index.php?SK=22">Yeni Üye Ol<a/></td>
 					<td>&nbsp;</td>
 					<td class="AltMenu"><a href="index.php?SK=3">Kullanım Koşulları<a/></td>
 					<td>&nbsp;</td>
@@ -239,4 +240,5 @@ if(isset($_REQUEST["SK"])){
 </html>
 <?php
 	$VeritabaniBaglantisi = null;
+ob_end_flush();
 	?>

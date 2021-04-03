@@ -18,6 +18,7 @@ if($AyarSayisi>0){
 	$SiteKeywords              = $Ayarlar["SiteKeywords"];
 	$SiteCopyrightMetni        = $Ayarlar["SiteCopyrightMetni"];
 	$SiteLogosu                = $Ayarlar["SiteLogosu"];
+	$SiteLinki             	   = $Ayarlar["SiteLinki"];
 	$SiteEmailAdresi           = $Ayarlar["SiteEmailAdresi"];
 	$SiteEmailSifresi          = $Ayarlar["SiteEmailSifresi"];
 	$SiteEmailHostAdresi       = $Ayarlar["SiteEmailHostAdresi"];
@@ -50,6 +51,29 @@ if($MetinSayisi>0){
 }else{
 	//echo "Metinler  Hatası <br />". $Hata->getMessage();
 	die();
+}
+
+if(isset($_SESSION["Kullanici"])){
+$KullaniciSorgusu = $VeritabaniBaglantisi -> prepare("SELECT * FROM uyeler WHERE EmailAdresi = ? LIMIT 1");
+$KullaniciSorgusu -> execute([$_SESSION["Kullanici"]]);
+$KullaniciSayisi     = $KullaniciSorgusu->rowCount();
+$Kullanici       = $KullaniciSorgusu->fetch(PDO::FETCH_ASSOC);
+
+if($MetinSayisi>0){
+	$KullaniciId                   		= $Kullanici["id"];
+	$EmailAdresi                       	= $Kullanici["EmailAdresi"];
+	$Sifre                				= $Kullanici["Sifre"];
+	$IsimSoyism           	  			= $Kullanici["IsimSoyism"];
+	$TelefonNumarasi              		= $Kullanici["TelefonNumarasi"];
+	$Adres         						= $Kullanici["Adres"];
+	$Durumu         					= $Kullanici["Durumu"];
+	$KayitTarihi               		  	= $Kullanici["KayitTarihi"];
+	$KayitIpAdresi           	  		= $Kullanici["KayitIpAdresi"];
+	$Aktivasyon           	  			= $Kullanici["Aktivasyon"];
+}else{
+	//echo "Kullanici  Hatası <br />". $Hata->getMessage();
+	die();
+}
 }
 
 
