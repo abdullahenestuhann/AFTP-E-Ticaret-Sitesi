@@ -29,7 +29,7 @@ if(($GelenEMailAdresi!="") and ($GelenSifre!="")){
 						$_SESSION["Kullanici"]=$GelenEMailAdresi;
 						
 						if($_SESSION["Kullanici"]==$GelenEMailAdresi){
-							header("Location:index.php?SK=49");
+							header("Location:index.php?SK=50");
 							exit();
 						}else{
 							header("Location:index.php?SK=33");

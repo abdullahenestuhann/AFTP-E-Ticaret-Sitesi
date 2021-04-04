@@ -51,8 +51,22 @@ $Sayfa[46]="yenisifreolustursonuchata.php";
 $Sayfa[47]="yenisifreolustursonucuyusmayansifre.php";
 $Sayfa[48]="yenisifreolustursonuceksialan.php";
 
-$Sayfa[49]="hesabimuyelikbilgilerim.php";
+$Sayfa[49]="uyecikis.php";
+$Sayfa[50]="hesabimuyelikbilgilerim.php";
+$Sayfa[51]="hesabimuyelikbilgilerimguncelle.php";
+$Sayfa[52]="hesabimuyelikbilgilerimguncellesonuc.php";
 
+$Sayfa[53]="hesabimuyelikbilgilerimguncellesonuctamam.php";
+$Sayfa[54]="hesabimuyelikbilgilerimguncellesonuchata.php";
+$Sayfa[55]="hesabimuyelikbilgilerimguncellesonuctekrarlanan.php";
+$Sayfa[56]="hesabimuyelikbilgilerimguncellesonuceksikalan.php";
+$Sayfa[57]="hesabimuyelikbilgilerimguncellesonucuyusmayansifre.php";
+
+$Sayfa[58]="hesabimadresler.php";
+$Sayfa[59]="hesabimfavoriler.php";
+$Sayfa[60]="hesabimyorumlar.php";
+$Sayfa[61]="hesabimsiparisler.php";
+$Sayfa[62]=".php";
 
 
 ?>
