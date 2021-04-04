@@ -1,0 +1,1 @@
+burası hesabım üyelik bilgilerim

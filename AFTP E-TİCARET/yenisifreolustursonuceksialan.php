@@ -4,13 +4,13 @@
 		 </tr>
 	
 		<tr height="100">
-		<td align="center"><img src="Resimler/Tamam.png" border="0"</td>		
+		<td align="center"><img src="Resimler/Dikkat.png" border="0"</td>		
 		 </tr>
 	<tr height="50">
-		<td align="center"><b>TEBRİKLER. Yeni Şifre Sıfırlama Maili Gönderildi.</b></td>		
+		<td align="center"><b>DİKKAT!Şifre Sıfırlama Formunda Eksik Veri Girişi.</b></td>		
 		 </tr>
 	<tr>
-		<td align="center">Üyeliğinizi ait hesabınızın şifresini sıfırlamak için lütfen e-mail adresinize gönderilen mail içerisindeki aktivasyona tıklayınız.</td>		
+		<td align="center"> Şifre Sıfırlama Formu dahilinde lütfen gerekli alanları doldurarak tekrar tekrar.</td>		
 		 </tr>
 	<tr>
 		<td class="SonucSayfalari" align="center">Anasayfaya dönmek için lütfen buraya <a href="index.php"><b>tıklayınız</b></a></td>		

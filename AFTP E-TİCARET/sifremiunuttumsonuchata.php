@@ -4,13 +4,13 @@
 		 </tr>
 	
 		<tr height="100">
-		<td align="center"><img src="Resimler/Tamam.png" border="0"</td>		
+		<td align="center"><img src="Resimler/Hata.png" border="0"</td>		
 		 </tr>
 	<tr height="50">
-		<td align="center"><b>TEBRİKLER. Yeni Şifre Sıfırlama Maili Gönderildi.</b></td>		
+		<td align="center"><b>HATA. Şifre Sıfırlama Maili Gönderilemedi.</b></td>		
 		 </tr>
 	<tr>
-		<td align="center">Üyeliğinizi ait hesabınızın şifresini sıfırlamak için lütfen e-mail adresinize gönderilen mail içerisindeki aktivasyona tıklayınız.</td>		
+		<td align="center">İşlem sırasında beklenmeyen bir hata oluştu.Lütfen daha sonra tekrar deneyiniz.</td>		
 		 </tr>
 	<tr>
 		<td class="SonucSayfalari" align="center">Anasayfaya dönmek için lütfen buraya <a href="index.php"><b>tıklayınız</b></a></td>		
