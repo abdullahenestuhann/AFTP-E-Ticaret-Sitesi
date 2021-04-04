@@ -12,7 +12,7 @@ if(isset($_SESSION["Kullanici"])){
 		<td width="10">&nbsp;</td>		
 		<td width="203" style="border: 1px solid black;text-align: center; padding: 10px 0;font-weight:bold; "><a href="index.php?SK=58" style="text-decoration: none;color: black;">Adresler</a></td>
 		<td width="10">&nbsp;</td>		
-		<td width="203" style="border: 1px solid black;text-align: center; padding: 10px 0;font-weight:bold;"><a href="index.php?SK=59" style="text-decoration: none;color: black;">Favariler</a></td>	
+		<td width="203" style="border: 1px solid black;text-align: center; padding: 10px 0;font-weight:bold;"><a href="index.php?SK=59" style="text-decoration: none;color: black;">Favoriler</a></td>	
 		<td width="10">&nbsp;</td>		
 		<td width="203" style="border: 1px solid black;text-align: center; padding: 10px 0;font-weight:bold;"><a href="index.php?SK=60" style="text-decoration: none;color: black;">Yorumlar</a></td>	
 		<td width="10">&nbsp;</td>						
