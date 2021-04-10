@@ -28,6 +28,8 @@ if ( $AyarSayisi > 0 ) {
   $SosyalLinkInstagram = $Ayarlar[ "SosyalLinkInstagram" ];
   $SosyalLinkPinterest = $Ayarlar[ "SosyalLinkPinterest" ];
   $SosyalLinkYoutube = $Ayarlar[ "SosyalLinkYoutube" ];
+  $DolarKuru = $Ayarlar[ "DolarKuru" ];
+  $EuroKuru = $Ayarlar[ "EuroKuru" ];
 
 
 } else {

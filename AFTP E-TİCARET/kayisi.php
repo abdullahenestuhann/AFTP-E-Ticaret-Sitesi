@@ -22,13 +22,13 @@ if ( isset( $_REQUEST[ "AramaIcerigi" ] ) ) {
 
 $SayfalamaIcinSolVeSagButonSayisi = 2;
 $SayfaBasinaGosterilecekKayitSayisi = 10;
-$ToplamKayitSayisiSorgusu = $VeritabaniBaglantisi->prepare( "SELECT * from urunler where UrunTuru='Kuruyemis' and   Durumu = '1' $MenuKosulu order by  id DESC " );
+$ToplamKayitSayisiSorgusu = $VeritabaniBaglantisi->prepare( "SELECT * from urunler where UrunTuru='Kayisi' and   Durumu = '1' $MenuKosulu order by  id DESC " );
 $ToplamKayitSayisiSorgusu->execute();
 $ToplamKayitSayisiSorgusu = $ToplamKayitSayisiSorgusu->rowCount();
 $SayfalamayaBaslanacakKayitSayisi = ( $Sayfalama * $SayfaBasinaGosterilecekKayitSayisi ) - $SayfaBasinaGosterilecekKayitSayisi;
 $BulunanSayfaSayisi = ceil( $ToplamKayitSayisiSorgusu / $SayfaBasinaGosterilecekKayitSayisi );
 
-$AnaMenununTumUrunSayiSorgusu = $VeritabaniBaglantisi->prepare( "SELECT SUM(UrunSayisi) AS MenununToplamUrunu FROM menuler  WHERE UrunTuru = 'Kuruyemis' " );
+$AnaMenununTumUrunSayiSorgusu = $VeritabaniBaglantisi->prepare( "SELECT SUM(UrunSayisi) AS MenununToplamUrunu FROM menuler  WHERE UrunTuru = 'Kayisi' " );
 $AnaMenununTumUrunSayiSorgusu->execute();
 $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH_ASSOC );
 ?>
@@ -44,10 +44,10 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
           </tr>
           <tr height="30">
           <tr height="30">
-            <td><a href="index.php?SK=84" style="text-decoration: none; <?php if($GelenMenuId==""){ ?>color: #FF9900;<? }else{ ?>color: #646464;<?php } ?> font-weight: bold;">&nbsp;Tüm Ürünler (<?php echo $AnaMenununTumUrunSayiSorgusu["MenununToplamUrunu"]; ?>)</a></td>
+            <td><a href="index.php?SK=85" style="text-decoration: none; <?php if($GelenMenuId==""){ ?>color: #FF9900;<? }else{ ?>color: #646464;<?php } ?> font-weight: bold;">&nbsp;Tüm Ürünler (<?php echo $AnaMenununTumUrunSayiSorgusu["MenununToplamUrunu"]; ?>)</a></td>
           </tr>
           <?php
-          $MenulerSorgusu = $VeritabaniBaglantisi->prepare( "SELECT * FROM menuler WHERE UrunTuru ='Kuruyemis' order by MenuAdi ASC" );
+          $MenulerSorgusu = $VeritabaniBaglantisi->prepare( "SELECT * FROM menuler WHERE UrunTuru ='Kayisi' order by MenuAdi ASC" );
           $MenulerSorgusu->execute();
           $MenuKayitSayisi = $MenulerSorgusu->rowCount();
           $MenuKayitlari = $MenulerSorgusu->fetchAll( PDO::FETCH_ASSOC );
@@ -56,7 +56,7 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
           foreach ( $MenuKayitlari as $Menu ) {
             ?>
           <tr height="30">
-            <td><a href="index.php?SK=84&MenuID=<?php echo $Menu["id"]; ?>" style="text-decoration: none; <?php if($GelenMenuId==$Menu["id"]){ ?>color: #FF9900;<? }else{ ?>color: #646464;<?php } ?> font-weight: bold;">&nbsp;<?php echo DonusumleriGeriDondur($Menu["MenuAdi"]); ?> (<?php echo DonusumleriGeriDondur($Menu["UrunSayisi"]); ?>)</a></td>
+            <td><a href="index.php?SK=85&MenuID=<?php echo $Menu["id"]; ?>" style="text-decoration: none; <?php if($GelenMenuId==$Menu["id"]){ ?>color: #FF9900;<? }else{ ?>color: #646464;<?php } ?> font-weight: bold;">&nbsp;<?php echo DonusumleriGeriDondur($Menu["MenuAdi"]); ?> (<?php echo DonusumleriGeriDondur($Menu["UrunSayisi"]); ?>)</a></td>
           </tr>
           </tr>
           
@@ -97,7 +97,7 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
     <td width="795" valign="top" align="left"><table width="795" align="center" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td><div class="AramaAlani">
-              <form action="index.php?SK=84" method="post">
+              <form action="index.php?SK=85" method="post">
                 <?php
                 if ( $GelenMenuId != "" ) {
                   ?>
@@ -121,7 +121,7 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
           <td><table width="795" align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
                 <?php
-                $UrunlerSorgusu = $VeritabaniBaglantisi->prepare( "select * from urunler where UrunTuru='Kuruyemis' and    Durumu = '1' $MenuKosulu $AramaKosulu order by  id DESC LIMIT $SayfalamayaBaslanacakKayitSayisi,$SayfaBasinaGosterilecekKayitSayisi" );
+                $UrunlerSorgusu = $VeritabaniBaglantisi->prepare( "select * from urunler where UrunTuru='Kayisi' and    Durumu = '1' $MenuKosulu $AramaKosulu order by  id DESC LIMIT $SayfalamayaBaslanacakKayitSayisi,$SayfaBasinaGosterilecekKayitSayisi" );
                 $UrunlerSorgusu->execute();
                 $UrunSayisi = $UrunlerSorgusu->rowCount();
                 $UrunKayitlari = $UrunlerSorgusu->fetchALL( PDO::FETCH_ASSOC );
@@ -169,10 +169,10 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
                 <td width="191" valign="top"><table width="191"  align="left"  border="0"  cellpadding="0" cellspacing="0" style=" margin-bottom:10px">
                     <!-- border: 1px solid #CCCCCC;-->
                     <tr height="40">
-                      <td  align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"><img src="Resimler/UrunResimleri/kuruyemis/<?php echo DonusumleriGeriDondur($Kayit["UrunResmiBir"]);?>" border="0" width="185" height="247"></a></td>
+                      <td  align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"><img src="Resimler/UrunResimleri/Kayisi/<?php echo DonusumleriGeriDondur($Kayit["UrunResmiBir"]);?>" border="0" width="185" height="247"></a></td>
                     </tr>
                     <tr height="25">
-                      <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#FF9900;font-weight: bold;text-decoration: none; ">KURUYEMİŞ KOY</a></td>
+                      <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#FF9900;font-weight: bold;text-decoration: none; ">Kayısı</a></td>
                     </tr>
                     <tr height="25">
                       <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#646464;font-weight: bold;text-decoration: none; ">
@@ -225,9 +225,9 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
               <div class="SayfalamaAlaniIciNumaraAlaniKapsayicisi">
                 <?php
                 if ( $Sayfalama > 1 ) {
-                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=84" . $SayfalamaKosulu . "&SYF=1'><<</a></span>";
+                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=85" . $SayfalamaKosulu . "&SYF=1'><<</a></span>";
                   $SayfalamaIcinSayfaDegeriniBirGeriAl = $Sayfalama - 1;
-                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=84" . $SayfalamaKosulu . "&SYF=" . $SayfalamaIcinSayfaDegeriniBirGeriAl . "'><</a></span>";
+                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=85" . $SayfalamaKosulu . "&SYF=" . $SayfalamaIcinSayfaDegeriniBirGeriAl . "'><</a></span>";
                 }
                 for ( $SayfalamaIcinSayfaIndexDegeri = $Sayfalama - $SayfalamaIcinSolVeSagButonSayisi; $SayfalamaIcinSayfaIndexDegeri <= $Sayfalama + $SayfalamaIcinSolVeSagButonSayisi; $SayfalamaIcinSayfaIndexDegeri++ ) {
                   if ( ( $SayfalamaIcinSayfaIndexDegeri > 0 )and( $SayfalamaIcinSayfaIndexDegeri <= $BulunanSayfaSayisi ) ) {
@@ -236,7 +236,7 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
 
 
                     } else {
-                      echo "<span class='SayfalamaPasif'><a href='index.php?SK=84" . $SayfalamaKosulu . "&SYF=" . $SayfalamaIcinSayfaIndexDegeri . "'>" . $SayfalamaIcinSayfaIndexDegeri . "</a></span>";
+                      echo "<span class='SayfalamaPasif'><a href='index.php?SK=85" . $SayfalamaKosulu . "&SYF=" . $SayfalamaIcinSayfaIndexDegeri . "'>" . $SayfalamaIcinSayfaIndexDegeri . "</a></span>";
 
 
                     }
@@ -247,8 +247,8 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
 
                 if ( $Sayfalama != $BulunanSayfaSayisi ) {
                   $SayfalamaIcinSayfaDegeriniBirIleriAl = $Sayfalama + 1;
-                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=84" . $SayfalamaKosulu . "&SYF=" . $SayfalamaIcinSayfaDegeriniBirIleriAl . "'>></a></span>";
-                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=84" . $SayfalamaKosulu . "&SYF=" . $BulunanSayfaSayisi . "'>>></a></span>";
+                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=85" . $SayfalamaKosulu . "&SYF=" . $SayfalamaIcinSayfaDegeriniBirIleriAl . "'>></a></span>";
+                  echo "<span class='SayfalamaPasif'><a href='index.php?SK=85" . $SayfalamaKosulu . "&SYF=" . $BulunanSayfaSayisi . "'>>></a></span>";
 
 
                 }

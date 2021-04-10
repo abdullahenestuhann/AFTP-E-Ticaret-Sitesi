@@ -76,8 +76,8 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
               <tr>
                 <td width="523" class="AnaMenu">&nbsp;</td>
                 <td width="100" class="AnaMenu"><a href="index.php?SK=0">Anasayfa<a/></td>
-                <td width="130" class="AnaMenu"><a href="xxxxx">Kayısı Çeşitleri<a/></td>
-                <td width="120" class="AnaMenu"><a href="xxxxx">Kuruyemiş<a/></td>
+                <td width="130" class="AnaMenu"><a href="index.php?SK=85">Kayısı Çeşitleri<a/></td>
+                <td width="120" class="AnaMenu"><a href="index.php?SK=84">Kuruyemiş<a/></td>
                 <td></td>
               </tr>
             </table></td>

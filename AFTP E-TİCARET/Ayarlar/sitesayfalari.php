@@ -91,6 +91,6 @@ $Sayfa[ 80 ] = "hesabimyorumlar.php";
 $Sayfa[ 81 ] = "hesabimfavorilersil.php";
 $Sayfa[ 82 ] = "hesabimfavorilersilhata.php";
 	$Sayfa[ 83 ] = "urundetay.php";
-
-
+	$Sayfa[ 84 ] = "kuruyemis.php";
+	$Sayfa[ 85 ] = "kayisi.php";
 ?>
