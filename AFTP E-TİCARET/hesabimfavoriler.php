@@ -59,7 +59,7 @@ if ( isset( $_SESSION[ "Kullanici" ] ) ) {
             $UrunlerSorgusu = $VeritabaniBaglantisi->prepare( "SELECT * FROM urunler WHERE id=? LIMIT 1 " );
             $UrunlerSorgusu->execute( [ $FavoriSatirlar[ "UrunId" ] ] );
             $UrunKaydi = $UrunlerSorgusu->fetch( PDO::FETCH_ASSOC );
-			 
+
             $UrununAdi = $UrunKaydi[ "UrunAdi" ];
             $UrununUrunTuru = $UrunKaydi[ "UrunTuru" ];
             $UrununResmi = $UrunKaydi[ "UrunResmiBir" ];
@@ -84,7 +84,6 @@ if ( isset( $_SESSION[ "Kullanici" ] ) ) {
         </tr>
         <?php
         }
-
 
 
         if ( $BulunanSayfaSayisi > 1 ) {

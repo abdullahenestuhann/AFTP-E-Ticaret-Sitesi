@@ -9,6 +9,15 @@ function TarihBul( $Deger ) {
   return $Sonuc;
 }
 
+function UcGunİleriTarihBul() {
+  global $ZamanDamgasi;
+  $Birgun = 86400;
+  $Hesapla = $ZamanDamgasi + ( 3 * $Birgun );
+  $Cevir = date( "d.m.Y", $Hesapla );
+  $Sonuc = $Cevir;
+  return $Sonuc;
+}
+
 function RakamlarHaricTumKarekterleriSil( $Deger ) {
   $Islem = preg_replace( "/[^0-9]/", "", $Deger );
   $Sonuc = $Islem;

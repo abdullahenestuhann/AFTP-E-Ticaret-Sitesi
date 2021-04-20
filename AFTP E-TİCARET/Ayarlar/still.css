@@ -317,9 +317,32 @@ html, body {
 	outline: 0;
 	text-align: left;
 }
+.SepeteEkleButonu{
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	padding: 5px 5px;
+	background: #F87B00;
+	color: white;
+	border: 1px solid #994200;
+	outline: none;
+	text-align: center;
+	font-weight: bold;
+}
 
-
-
+.SepeteEkleButonu:hover{
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	padding: 5px 5px;
+	background: #994200;
+	color: white;
+	border: 1px solid #F87B00 ;
+	outline: none;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
 
 
 

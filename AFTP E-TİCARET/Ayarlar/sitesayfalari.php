@@ -90,7 +90,20 @@ $Sayfa[ 79 ] = "hesabimyorumyapsonuceksikalan.php";
 $Sayfa[ 80 ] = "hesabimyorumlar.php";
 $Sayfa[ 81 ] = "hesabimfavorilersil.php";
 $Sayfa[ 82 ] = "hesabimfavorilersilhata.php";
-	$Sayfa[ 83 ] = "urundetay.php";
-	$Sayfa[ 84 ] = "kuruyemis.php";
-	$Sayfa[ 85 ] = "kayisi.php";
+$Sayfa[ 83 ] = "urundetay.php";
+$Sayfa[ 84 ] = "kuruyemis.php";
+$Sayfa[ 85 ] = "kayisi.php";
+
+	
+$Sayfa[ 87 ] = "favorilereekle.php";
+$Sayfa[ 88 ] = "favorilereekletamam.php";
+$Sayfa[ 89 ] = "favorilereeklehata.php";
+$Sayfa[ 90 ] = "favorilereekletekrarlanan.php";
+	
+$Sayfa[ 91 ] = "sepeteekle.php";
+$Sayfa[ 92 ] = "sepeteeklehata.php";
+$Sayfa[ 93 ] = "sepeteekleuyegirisiyapilmamis.php";
+$Sayfa[ 94 ] = "alisverissepeti.php";
+
+
 ?>

@@ -169,10 +169,10 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
                 <td width="191" valign="top"><table width="191"  align="left"  border="0"  cellpadding="0" cellspacing="0" style=" margin-bottom:10px">
                     <!-- border: 1px solid #CCCCCC;-->
                     <tr height="40">
-                      <td  align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"><img src="Resimler/UrunResimleri/kayisi/<?php echo DonusumleriGeriDondur($Kayit["UrunResmiBir"]);?>" border="0" width="185" height="247"></a></td>
+                      <td  align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"><img src="Resimler/UrunResimleri/Kayisi/<?php echo DonusumleriGeriDondur($Kayit["UrunResmiBir"]);?>" border="0" width="185" height="247"></a></td>
                     </tr>
                     <tr height="25">
-                      <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#FF9900;font-weight: bold;text-decoration: none; ">KAYISI</a></td>
+                      <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#FF9900;font-weight: bold;text-decoration: none; ">Kayısı</a></td>
                     </tr>
                     <tr height="25">
                       <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#646464;font-weight: bold;text-decoration: none; ">
