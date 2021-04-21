@@ -112,6 +112,28 @@ if ( isset( $_GET[ "ID" ] ) ) {
                     <?php } ?></td>
                   <td width="10">&nbsp;</td>
                   <td width="605"><input type="submit" value="SEPETE EKLE" class="SepeteEkleButonu"</td>
+					  <tr height="45">
+						<td colspan="5"><table width="705" align="center" border="0" cellpadding="0" cellspacing="0">
+							<tr height="45">
+								<td width="500" align="left"><select name="Varyant" class="SelectAlanlari">
+									<?php
+									
+									$VaryantSorgusu		=	$VeritabaniBaglantisi->prepare("SELECT * FROM urunvaryanlari WHERE UrunId = ? AND StokAdedi > ? ORDER BY VaryanAdi ASC");
+									$VaryantSorgusu->execute([DonusumleriGeriDondur($UrunSorgusuKaydi["id"]), 0]);
+									$VaryantSayisi		=	$VaryantSorgusu->rowCount();
+									$VaryantKayitlari	=	$VaryantSorgusu->fetchAll(PDO::FETCH_ASSOC);
+									
+									foreach($VaryantKayitlari as $VaryantSecimi){
+									?>
+										<option value="<?php echo $VaryantSecimi["id"]; ?>"><?php echo DonusumleriGeriDondur($VaryantSecimi["VaryanAdi"]); ?></option>
+									<?php
+									}
+									?>
+								</select></td>
+								<td width="205" align="right" style="font-size: 25px; color: black; font-weight: bold;"><?php echo FiyatBicimlendir($UrunFiyatiHesapla); ?> TL</td>
+							</tr>
+						</table></td>
+					</tr>
                 </tr>
               </table>
             </form></td>

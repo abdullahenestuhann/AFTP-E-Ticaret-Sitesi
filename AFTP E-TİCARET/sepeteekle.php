@@ -1,101 +1,94 @@
 <?php
-if ( isset( $_SESSION[ "Kullanici" ] ) ) {
-  if ( isset( $_GET[ "ID" ] ) ) {
-    $GelenID = Guvenlik( $_GET[ "ID" ] );
-  } else {
-    $GelenID = "";
-  }
+if(isset($_SESSION["Kullanici"])){
+	if(isset($_GET["ID"])){
+		$GelenID		=	Guvenlik($_GET["ID"]);
+	}else{
+		$GelenID		=	"";
+	}
+	
+	if(isset($_POST["Varyant"])){
+		$GelenVaryantID	=	Guvenlik($_POST["Varyant"]);
+	}else{
+		$GelenVaryantID	=	"";
+	}
+	
+	if(($GelenID!="") and ($GelenVaryantID!="")){
+		$KullanicininSepetKontrolSorgu	=	$VeritabaniBaglantisi->prepare("SELECT * FROM sepet WHERE UyeId = ? ORDER BY id DESC LIMIT 1");
+		$KullanicininSepetKontrolSorgu->execute([$KullaniciId]);
+		$KullanicininSepetSayisi		=	$KullanicininSepetKontrolSorgu->rowCount();
 
-  if ( $GelenID != "" ) {
+		if($KullanicininSepetSayisi>0){
+			$UrunSepetKontrolSorgusu	=	$VeritabaniBaglantisi->prepare("SELECT * FROM sepet WHERE UyeId = ? AND UrunId = ? AND VaryantId = ? LIMIT 1");
+			$UrunSepetKontrolSorgusu->execute([$KullaniciId, $GelenID, $GelenVaryantID]);
+			$UrunSepetSayisi			=	$UrunSepetKontrolSorgusu->rowCount();
+			$UrunSepetKaydi				=	$UrunSepetKontrolSorgusu->fetch(PDO::FETCH_ASSOC);
 
+			if($UrunSepetSayisi>0){
+				$UrununIDsi						=	$UrunSepetKaydi["id"];
+				$UrununSepettekiMevcutAdedi		=	$UrunSepetKaydi["UrunAdedi"];
+				$UrununYeniAdedi				=	$UrununSepettekiMevcutAdedi+1;
 
-    $KullanicininSepetKontrolSorgusu = $VeritabaniBaglantisi->prepare( "select * from sepet where UyeId=? order by id desc LIMIT 1" );
-    $KullanicininSepetKontrolSorgusu->execute( [ $KullaniciId ] );
-    $KullanicininSepetSayisi = $KullanicininSepetKontrolSorgusu->rowCount();
+				$UrunGuncellemeSorgusu	=	$VeritabaniBaglantisi->prepare("UPDATE sepet SET UrunAdedi = ? WHERE id = ? AND UyeId = ? AND UrunId = ? LIMIT 1");
+				$UrunGuncellemeSorgusu->execute([$UrununYeniAdedi, $UrununIDsi, $KullaniciId, $GelenID]);
+				$UrunGuncellemeSayisi		=	$UrunGuncellemeSorgusu->rowCount();
 
-    if ( $KullanicininSepetSayisi > 0 ) {
+					if($UrunGuncellemeSayisi>0){
+						header("Location:index.php?SK=94");
+						exit();
+					}else{
+						header("Location:index.php?SK=92");
+						exit();
+					}
+			}else{
+				$UrunEklemeSorgusu		=	$VeritabaniBaglantisi->prepare("INSERT INTO sepet (UyeId, UrunId, VaryantId, UrunAdedi) values (?, ?, ?, ?)");
+				$UrunEklemeSorgusu->execute([$KullaniciId, $GelenID, $GelenVaryantID, 1]);
+				$UrunEklemeSayisi		=	$UrunEklemeSorgusu->rowCount();
+				$SonIdDegeri			=	$VeritabaniBaglantisi->lastInsertId();
 
-      $UrunSepetKontrolSorgusu = $VeritabaniBaglantisi->prepare( "select * from sepet where UyeId=? and UrunId = ?  LIMIT 1" );
-      $UrunSepetKontrolSorgusu->execute( [ $KullaniciId, $GelenID ] );
-      $UrunSepetKontrolSayisi = $UrunSepetKontrolSorgusu->rowCount();
-      $UrunSepetKontrolKaydi = $UrunSepetKontrolSorgusu->fetch( PDO::FETCH_ASSOC );
+					if($UrunEklemeSayisi>0){
+						$SiparisNumarasiniGuncelleSorgusu		=	$VeritabaniBaglantisi->prepare("UPDATE sepet SET SepetNumarasi = ? WHERE UyeId = ?");
+						$SiparisNumarasiniGuncelleSorgusu->execute([$SonIdDegeri, $KullaniciId]);
+						$SiparisNumarasiniGuncelleSayisi		=	$SiparisNumarasiniGuncelleSorgusu->rowCount();
+							if($SiparisNumarasiniGuncelleSayisi>0){
+								header("Location:index.php?SK=94");
+								exit();
+							}else{
+								header("Location:index.php?SK=92");
+								exit();
+							}
+					}else{
+						header("Location:index.php?SK=92");
+						exit();
+					}
+			}
+		}else{
+			$UrunEklemeSorgusu		=	$VeritabaniBaglantisi->prepare("INSERT INTO sepet (UyeId, UrunId, VaryantId, UrunAdedi) values (?, ?, ?, ?)");
+			$UrunEklemeSorgusu->execute([$KullaniciId, $GelenID, $GelenVaryantID, 1]);
+			$UrunEklemeSayisi		=	$UrunEklemeSorgusu->rowCount();
+			$SonIdDegeri			=	$VeritabaniBaglantisi->lastInsertId();
 
-
-      if ( $UrunSepetKontrolSayisi > 0 ) {
-        $UrununIDsi = $UrunSepetKontrolKaydi[ "id" ];
-        $UrununSepettekiMevcutAdedi = $UrunSepetKontrolKaydi[ "UrunAdedi" ];
-        $UrununYeniAdedi = $UrununSepettekiMevcutAdedi + 1;
-
-        $UrunGuncellemeSorgusu = $VeritabaniBaglantisi->prepare( "update sepet set UrunAdedi = ? where id= ? and UyeId =? and UrunId=? LIMIT 1" );
-        $UrunGuncellemeSorgusu->execute( [ $UrununYeniAdedi, $UrununIDsi, $KullaniciId, $GelenID ] );
-        $UrunGuncellemeSayisi = $UrunGuncellemeSorgusu->rowCount();
-        if ( $UrunGuncellemeSayisi > 0 ) {
-          header( "Location:index.php?SK=94" );
-          exit();
-        } else {
-          header( "Location:index.php?SK=92" );
-          exit();
-        }
-
-
-      } else {
-        $UrunEklemeSorgusu = $VeritabaniBaglantisi->prepare( "insert into sepet (UyeId,UrunId,UrunAdedi) values (?,?,?)" );
-        $UrunEklemeSorgusu->execute( [ $KullaniciId, $GelenID, 1 ] );
-        $UrunEklemeSayisi = $UrunEklemeSorgusu->rowCount();
-        $SonIdDgeri = $VeritabaniBaglantisi->lastInsertId();
-        if ( $UrunEklemeSayisi > 0 ) {
-          $SiparisNumarasiGuncelleSorgusu = $VeritabaniBaglantisi->prepare( "update sepet set SepetNumarasi = ? where UyeId= ? " );
-          $SiparisNumarasiGuncelleSorgusu->execute( [ $SonIdDgeri, $KullaniciId ] );
-          $SiparisNumarasiGuncellemeSayisi = $SiparisNumarasiGuncelleSorgusu->rowCount();
-
-          if ( $SiparisNumarasiGuncellemeSayisi > 0 ) {
-            header( "Location:index.php?SK=94" );
-            exit();
-          } else {
-            header( "Location:index.php?SK=92" );
-            exit();
-          }
-
-        } else {
-          header( "Location:index.php?SK=92" );
-          exit();
-        }
-      }
-
-
-    } else {
-      $UrunEklemeSorgusu = $VeritabaniBaglantisi->prepare( "insert into sepet (UyeId,UrunId, UrunAdedi) values (?,?,?)" );
-      $UrunEklemeSorgusu->execute( [ $KullaniciId, $GelenID, 1 ] );
-      $UrunEklemeSayisi = $UrunEklemeSorgusu->rowCount();
-      $SonIdDgeri = $VeritabaniBaglantisi->lastInsertId();
-      if ( $UrunEklemeSayisi > 0 ) {
-        $SiparisNumarasiGuncelleSorgusu = $VeritabaniBaglantisi->prepare( "update sepet set SepetNumarasi = ? where UyeId= ? " );
-        $SiparisNumarasiGuncelleSorgusu->execute( [ $SonIdDgeri, $KullaniciId ] );
-        $SiparisNumarasiGuncellemeSayisi = $SiparisNumarasiGuncelleSorgusu->rowCount();
-
-        if ( $SiparisNumarasiGuncellemeSayisi > 0 ) {
-          header( "Location:index.php?SK=94" );
-          exit();
-        } else {
-          header( "Location:index.php?SK=92" );
-          exit();
-        }
-
-
-      } else {
-        header( "Location:index.php?SK=92" );
-        exit();
-      }
-
-    }
-
-
-  } else {
-    header( "Location:index.php" );
-    exit();
-  }
-} else {
-  header( "Location:index.php?SK=93" );
-  exit();
+				if($UrunEklemeSayisi>0){
+					$SiparisNumarasiniGuncelleSorgusu		=	$VeritabaniBaglantisi->prepare("UPDATE sepet SET SepetNumarasi = ? WHERE UyeId = ?");
+					$SiparisNumarasiniGuncelleSorgusu->execute([$SonIdDegeri, $KullaniciId]);
+					$SiparisNumarasiniGuncelleSayisi		=	$SiparisNumarasiniGuncelleSorgusu->rowCount();
+						if($SiparisNumarasiniGuncelleSayisi>0){
+							header("Location:index.php?SK=94");
+							exit();
+						}else{
+							header("Location:index.php?SK=92");
+							exit();
+						}
+				}else{
+					header("Location:index.php?SK=92");
+					exit();
+				}
+		}
+	}else{
+		header("Location:index.php");
+		exit();
+	}
+}else{
+	header("Location:index.php?SK=93");
+	exit();
 }
 ?>

@@ -15,7 +15,7 @@ html, body {
   font-weight: normal;
   text-decoration: none;
 }
-.MaviAlanMenusu a:link, .MaviAlanMenusu a:active, .MaviAlanMenusu a:visited, .MaviAlanMenusu a:hover {
+.MaviAlanMenusu,.MaviAlanMenusu a:link, .MaviAlanMenusu a:active, .MaviAlanMenusu a:visited, .MaviAlanMenusu a:hover {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
   font-size: 14px;
   color: #FFFFFF;
@@ -343,8 +343,33 @@ html, body {
 	font-weight: bold;
 	cursor: pointer;
 }
-
-
+.SepetIciDevamEtVeAlisverisiTamamlaButonu{
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	padding: 5px 5px;
+	background: #F87B00;
+	color: white;
+	border: 1px solid #F87B00;
+	border-radius: 4px;
+	outline: none;
+	text-align: center;
+	font-weight: bold;
+}
+.SepetIciDevamEtVeAlisverisiTamamlaButonu:hover{
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	padding: 5px 5px;
+	background: #000000;
+	color: white;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	outline: none;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
 
 
 
