@@ -155,7 +155,7 @@ $SepetSifirlamaSorgusu->execute([0, 0, "", 0, $KullaniciId])
           <td  align="right" style="font-size: 25px; font-weight: bold;"><?php echo FiyatBicimlendir($SepettekiToplamFiyat); ?></td>
         </tr>
         <tr>
-          <td><div class="SepetIciDevamEtVeAlisverisiTamamlaButonu"><a href="index.php?SK=98" style="color: white; font-size: 20px; font-weight: bold;text-decoration: none;"><img src="Resimler/SepetBeyaz21x20.png" border="0" style="margin-top: 5px; "> DEVAM ET</a></div></td>
+          <td><a href="index.php?SK=98" style="color: white; font-size: 20px; font-weight: bold;text-decoration: none;"><div class="SepetIciDevamEtVeAlisverisiTamamlaButonu"><img src="Resimler/SepetBeyaz21x20.png" border="0" style="margin-top: 5px; "> DEVAM ET</div></a></td>
         </tr>
       </table></td>
   </tr>

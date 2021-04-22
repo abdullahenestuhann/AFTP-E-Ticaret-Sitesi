@@ -30,6 +30,7 @@ if ( $AyarSayisi > 0 ) {
   $SosyalLinkYoutube = $Ayarlar[ "SosyalLinkYoutube" ];
   $DolarKuru = $Ayarlar[ "DolarKuru" ];
   $EuroKuru = $Ayarlar[ "EuroKuru" ];
+  $UcretsizKargoBaraji = $Ayarlar[ "UcretsizKargoBaraji" ];
 
 
 } else {
