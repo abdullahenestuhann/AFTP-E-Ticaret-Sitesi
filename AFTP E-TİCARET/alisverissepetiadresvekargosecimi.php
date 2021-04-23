@@ -87,7 +87,7 @@ if($StokIcinSepettekiUrunSayisi>0){
 							$SepettekiToplamUrunSayisi				+=	$SepettekiUrununAdedi;
 							$SepettekiToplamFiyat					+=	($UrunFiyatiHesapla*$SepettekiUrununAdedi);
 							
-							$SepettekiToplamKargoFiyatiHesapla		+=	($UrununKargoUcreti*$SepettekiUrununAdedi);
+							$SepettekiToplamKargoFiyatiHesapla	  =	$UrununKargoUcreti;
 							$SepettekiToplamKargoFiyatiBicimlendir	=	FiyatBicimlendir($SepettekiToplamKargoFiyatiHesapla);
 						}
 						

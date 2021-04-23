@@ -82,7 +82,7 @@ if(isset($_SESSION["Kullanici"])){
 				$SepettekiToplamUrunSayisi				+=	$SepettekiUrununAdedi;
 				$SepettekiToplamFiyat					+=	($UrunFiyatiHesapla*$SepettekiUrununAdedi);
 
-				$SepettekiToplamKargoFiyatiHesapla		+=	($UrununKargoUcreti*$SepettekiUrununAdedi);
+				$SepettekiToplamKargoFiyatiHesapla		=	$UrununKargoUcreti;
 				$SepettekiToplamKargoFiyatiBicimlendir	=	FiyatBicimlendir($SepettekiToplamKargoFiyatiHesapla);
 			}
 
