@@ -23,7 +23,7 @@ if ( empty( $_SESSION[ "Yonetici" ] ) ) {
       $_SESSION[ "Yonetici" ] = $GelenYKullanici;
 
 
-      header( "Location:index.php?SKD=0" );
+      header( "Location:index.php?SKD=0&SKI=0" );
       exit();
     } else {
       header( "Location:index.php?SKD=3" );
