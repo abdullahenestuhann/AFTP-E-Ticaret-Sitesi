@@ -81,7 +81,26 @@ if ( isset( $_SESSION[ "Kullanici" ] ) ) {
     //echo "Kullanici  Hatası <br />". $Hata->getMessage();
     die();
   }
+	
 }
+if ( isset( $_SESSION[ "Yonetici" ] ) ) {
+  $YoneticiSorgusu = $VeritabaniBaglantisi->prepare( "SELECT * FROM yoneticiler WHERE KullaniciAdi = ? LIMIT 1" );
+  $YoneticiSorgusu->execute( [ $_SESSION[ "Yonetici" ] ] );
+  $YoneticiSayisi = $YoneticiSorgusu->rowCount();
+  $Yonetici = $YoneticiSorgusu->fetch( PDO::FETCH_ASSOC );
 
+  if ( $YoneticiSayisi > 0 ) {
+    $YoneticiKullaniciId = $Yonetici[ "id" ];
+	$YoneticiKullaniciAdi = $Yonetici[ "KullaniciAdi" ];
+    $YoneticiSifre = $Yonetici[ "Sifre" ];
+	$YoneticiIsimSoyisim = $Yonetici[ "IsimSoyisim" ];
+	$YoneticiEmailAdresi = $Yonetici[ "EmailAdresi" ];
+    $YoneticiTelefonNumarasi = $Yonetici[ "TelefonNumarasi" ];
+  } else {
+    //echo "Kullanici  Hatası <br />". $Hata->getMessage();
+    die();
+  }
+	
+}
 
 ?>
