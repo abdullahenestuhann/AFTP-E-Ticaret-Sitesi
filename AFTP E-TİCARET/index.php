@@ -65,11 +65,13 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <?php
           }
           ?>
-          <td width="20"><a href="xxxxx"><img src="Resimler/SepetBeyaz16x16.png"border=0 style="margin-top:5px;"></a></td>
-          <td width="103" class="MaviAlanMenusu">
-			  
-			   <?php if ( isset( $_SESSION[ "Kullanici" ] ) ) { ?><a href="index.php?SK=94">Alışveriş Sepeti</a><?php }else{  ?> Alışveriş Sepeti<?php } ?>
-			</td>
+          <td width="20"><?php if ( isset( $_SESSION[ "Kullanici" ] ) ) { ?><a href=""><img src="Resimler/SepetBeyaz16x16.png"border=0 style="margin-top:5px;"></a><?php }else{  ?><img src="Resimler/SepetBeyaz16x16.png"border=0 style="margin-top:5px;">
+            <?php } ?></td>
+          <td width="103" class="MaviAlanMenusu"><?php if ( isset( $_SESSION[ "Kullanici" ] ) ) { ?>
+            <a href="index.php?SK=94">Alışveriş Sepeti</a>
+            <?php }else{  ?>
+            Alışveriş Sepeti
+            <?php } ?></td>
         </tr>
       </table>
       <table width="1065" height="80%"  align="center" border="0" cellpadding="0" cellspacing="0">
@@ -136,7 +138,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <td>&nbsp;</td>
           <td ><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="20"><a href="xxxxx"><img src="Resimler/Facebook16x16.png" border="0" style="margin-top:5px;"<a/></td>
+                <td width="20"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkFacebook)?>"><img src="Resimler/Facebook16x16.png" border="0" style="margin-top:5px;"<a/></td>
                 <td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkFacebook)?>"target="_blank">Facebook<a/></td>
               </tr>
             </table></td>
@@ -160,7 +162,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <td>&nbsp;</td>
           <td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="20"><a href="xxxxx"><img src="Resimler/Twitter16x16.png" border="0" style="margin-top:5px;"<a/></td>
+                <td width="20"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkTwitter)?>"><img src="Resimler/Twitter16x16.png" border="0" style="margin-top:5px;"<a/></td>
                 <td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkTwitter)?>"target="_blank">Twitter<a/></td>
               </tr>
             </table></td>
@@ -174,7 +176,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <td>&nbsp;</td>
           <td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="20"><a href="xxxxx"><img src="Resimler/Instagram16x16.png" border="0" style="margin-top:5px;"<a/></td>
+                <td width="20"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkInstagram)?>"><img src="Resimler/Instagram16x16.png" border="0" style="margin-top:5px;"<a/></td>
                 <td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkInstagram)?>"target="_blank">İnstagram<a/></td>
               </tr>
             </table></td>
@@ -188,7 +190,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <td>&nbsp;</td>
           <td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="20"><a href="xxxxx"><img src="Resimler/LinkedIn16x16.png" border="0" style="margin-top:5px;"<a/></td>
+                <td width="20"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkLinkedin)?>"><img src="Resimler/LinkedIn16x16.png" border="0" style="margin-top:5px;"<a/></td>
                 <td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkLinkedin)?>"target="_blank">Linkedin<a/></td>
               </tr>
             </table></td>
@@ -202,7 +204,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <td>&nbsp;</td>
           <td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="20"><a href="xxxxx"><img src="Resimler/Pinterest16x16.png" border="0"<a/></td>
+                <td width="20"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkPinterest)?>"><img src="Resimler/Pinterest16x16.png" border="0"<a/></td>
                 <td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkPinterest)?>"target="_blank">Pinterest<a/></td>
               </tr>
             </table></td>
@@ -216,7 +218,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
           <td>&nbsp;</td>
           <td><table width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="20"><a href="xxxxx"><img src="Resimler/YouTube16x16.png" border="0" style="margin-top:5px;"<a/></td>
+                <td width="20"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkYoutube)?>"><img src="Resimler/YouTube16x16.png" border="0" style="margin-top:5px;"<a/></td>
                 <td width="230" class="AltMenu"><a href="<?php echo  DonusumleriGeriDondur($SosyalLinkYoutube)?>"target="_blank">Youtube<a/></td>
               </tr>
             </table></td>

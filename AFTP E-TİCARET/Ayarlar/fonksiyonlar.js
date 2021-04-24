@@ -16,14 +16,14 @@ $(document).ready(function () {
 
 
   }
-  $.KrediKartiSecildi			=	function(){
-		$(".BHAlanlari").css("display", "none");
-		$(".KKAlanlari").css("display", "block");
-	}
-	
-	$.BankaHavalesiSecildi			=	function(){
-		$(".KKAlanlari").css("display", "none");
-		$(".BHAlanlari").css("display", "block");
-	}
+  $.KrediKartiSecildi = function () {
+    $(".BHAlanlari").css("display", "none");
+    $(".KKAlanlari").css("display", "block");
+  }
+
+  $.BankaHavalesiSecildi = function () {
+    $(".KKAlanlari").css("display", "none");
+    $(".BHAlanlari").css("display", "block");
+  }
 
 });

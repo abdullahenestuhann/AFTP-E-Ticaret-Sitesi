@@ -42,41 +42,33 @@ $Sayfa[ 39 ] = "sifremiunuttumsonuctamam.php";
 $Sayfa[ 40 ] = "sifremiunuttumsonuchata.php";
 $Sayfa[ 41 ] = "sifremiunuttumsonucyanlisbilgi.php";
 $Sayfa[ 42 ] = "sifremiunuttumsonuceksialan.php";
-
-
 $Sayfa[ 43 ] = "yenisifreolustur.php";
 $Sayfa[ 44 ] = "yenisifreolustursonuc.php";
 $Sayfa[ 45 ] = "yenisifreolustursonuctamam.php";
 $Sayfa[ 46 ] = "yenisifreolustursonuchata.php";
 $Sayfa[ 47 ] = "yenisifreolustursonucuyusmayansifre.php";
 $Sayfa[ 48 ] = "yenisifreolustursonuceksialan.php";
-
 $Sayfa[ 49 ] = "uyecikis.php";
 $Sayfa[ 50 ] = "hesabimuyelikbilgilerim.php";
 $Sayfa[ 51 ] = "hesabimuyelikbilgilerimguncelle.php";
 $Sayfa[ 52 ] = "hesabimuyelikbilgilerimguncellesonuc.php";
-
 $Sayfa[ 53 ] = "hesabimuyelikbilgilerimguncellesonuctamam.php";
 $Sayfa[ 54 ] = "hesabimuyelikbilgilerimguncellesonuchata.php";
 $Sayfa[ 55 ] = "hesabimuyelikbilgilerimguncellesonuctekrarlanan.php";
 $Sayfa[ 56 ] = "hesabimuyelikbilgilerimguncellesonuceksikalan.php";
 $Sayfa[ 57 ] = "hesabimuyelikbilgilerimguncellesonucuyusmayansifre.php";
-
 $Sayfa[ 58 ] = "hesabimadresler.php";
 $Sayfa[ 59 ] = "hesabimfavoriler.php";
 $Sayfa[ 60 ] = "hesabimyorumlar.php";
 $Sayfa[ 61 ] = "hesabimsiparisler.php";
-
 $Sayfa[ 62 ] = "hesabimadreslerguncelle.php";
 $Sayfa[ 63 ] = "hesabimadreslerguncellesonuc.php";
 $Sayfa[ 64 ] = "hesabimadreslerguncellesonuctamam.php";
 $Sayfa[ 65 ] = "hesabimadreslerguncellesonuhata.php";
 $Sayfa[ 66 ] = "hesabimadreslerguncellesonuceksikalan.php";
-
 $Sayfa[ 67 ] = "hesabimadreslersil.php";
 $Sayfa[ 68 ] = "hesabimadreslersiltamam.php";
 $Sayfa[ 69 ] = "hesabimadreslersilhata.php";
-
 $Sayfa[ 70 ] = "hesabimadreslerekle.php";
 $Sayfa[ 71 ] = "hesabimadreslereklesonuc.php";
 $Sayfa[ 72 ] = "hesabimadreslereklesonuctamam.php";
@@ -93,18 +85,14 @@ $Sayfa[ 82 ] = "hesabimfavorilersilhata.php";
 $Sayfa[ 83 ] = "urundetay.php";
 $Sayfa[ 84 ] = "kuruyemis.php";
 $Sayfa[ 85 ] = "kayisi.php";
-
-	
 $Sayfa[ 87 ] = "favorilereekle.php";
 $Sayfa[ 88 ] = "favorilereekletamam.php";
 $Sayfa[ 89 ] = "favorilereeklehata.php";
 $Sayfa[ 90 ] = "favorilereekletekrarlanan.php";
-	
 $Sayfa[ 91 ] = "sepeteekle.php";
 $Sayfa[ 92 ] = "sepeteeklehata.php";
 $Sayfa[ 93 ] = "sepeteekleuyegirisiyapilmamis.php";
 $Sayfa[ 94 ] = "alisverissepeti.php";
-
 $Sayfa[ 95 ] = "alisverissepetiurunsil.php";
 $Sayfa[ 96 ] = "alisverissepetiurunadetazalt.php";
 $Sayfa[ 97 ] = "alisverissepetiurunadetarttir.php";
@@ -113,16 +101,10 @@ $Sayfa[ 99 ] = "alisverissepetiodemesecimi.php";
 $Sayfa[ 100 ] = "alisverissepetiodemesecimisonuc.php";
 $Sayfa[ 101 ] = "alisverissepetibankahavalesiileodemetamam.php";
 $Sayfa[ 102 ] = "alisverissepetibankahavalesiileodemehata.php";
-
 $Sayfa[ 103 ] = "alisverissepetikredikartiodeme.php";
 $Sayfa[ 104 ] = "alisverissepetikredikartiodemesonuc.php";
 $Sayfa[ 105 ] = "alisverissepetikredikartiodemesonuctamam.php";
-$Sayfa[ 106 ] = "alisverissepetikredikartiodemesonuchata.php";	
-
-
-
-
-
+$Sayfa[ 106 ] = "alisverissepetikredikartiodemesonuchata.php";
 
 
 ?>

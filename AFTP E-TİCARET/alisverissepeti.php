@@ -11,29 +11,29 @@ if ( isset( $_SESSION[ "Kullanici" ] ) ) {
     foreach ( $StokIcinSepettekiKayitlar as $StokIcinSepettekiSatirlar ) {
 
       $StokIcinSepetIdsi = $StokIcinSepettekiSatirlar[ "id" ];
-	  $StokIcinSepetUrunId = $StokIcinSepettekiSatirlar[ "UrunId" ];
-	$StokIcinSepettekiUrununVaryantIdsi = $StokIcinSepettekiSatirlar[ "VaryantId" ];
+      $StokIcinSepetUrunId = $StokIcinSepettekiSatirlar[ "UrunId" ];
+      $StokIcinSepettekiUrununVaryantIdsi = $StokIcinSepettekiSatirlar[ "VaryantId" ];
       $StokIcinSepettekiUrununAdedi = $StokIcinSepettekiSatirlar[ "UrunAdedi" ];
-      
+
 
       $StokIcinUrunVaryantBilgileriSorgusu = $VeritabaniBaglantisi->prepare( "Select * from urunvaryanlari where UrunId=? LIMIT 1" );
       $StokIcinUrunVaryantBilgileriSorgusu->execute( [ $StokIcinSepetUrunId ] );
       $StokIcinVaryanKaydi = $StokIcinUrunVaryantBilgileriSorgusu->fetch( PDO::FETCH_ASSOC );
 
       $StokIcinUrununStokAdedi = $StokIcinVaryanKaydi[ "StokAdedi" ];
-     if($StokIcinUrununStokAdedi==0){
-			$SepetSilSorgusu		=	$VeritabaniBaglantisi->prepare("DELETE FROM sepet WHERE id = ? AND UyeId = ? LIMIT 1");
-			$SepetSilSorgusu->execute([$StokIcinSepetIdsi, $KullaniciId]);
-		}elseif($StokIcinSepettekiUrununAdedi>$StokIcinUrununStokAdedi){
-			$SepetGuncellemeSorgusu		=	$VeritabaniBaglantisi->prepare("UPDATE sepet SET UrunAdedi= ? WHERE id = ? AND UyeId = ? LIMIT 1");
-			$SepetGuncellemeSorgusu->execute([$StokIcinUrununStokAdedi, $StokIcinSepetIdsi, $KullaniciId]);
-		}
+      if ( $StokIcinUrununStokAdedi == 0 ) {
+        $SepetSilSorgusu = $VeritabaniBaglantisi->prepare( "DELETE FROM sepet WHERE id = ? AND UyeId = ? LIMIT 1" );
+        $SepetSilSorgusu->execute( [ $StokIcinSepetIdsi, $KullaniciId ] );
+      } elseif ( $StokIcinSepettekiUrununAdedi > $StokIcinUrununStokAdedi ) {
+        $SepetGuncellemeSorgusu = $VeritabaniBaglantisi->prepare( "UPDATE sepet SET UrunAdedi= ? WHERE id = ? AND UyeId = ? LIMIT 1" );
+        $SepetGuncellemeSorgusu->execute( [ $StokIcinUrununStokAdedi, $StokIcinSepetIdsi, $KullaniciId ] );
+      }
 
     }
 
   }
-$SepetSifirlamaSorgusu		=	$VeritabaniBaglantisi->prepare("UPDATE sepet SET AdresId= ?, KargoId = ?, OdemeSecimi = ?, TaksitSecimi = ? WHERE UyeId = ?");
-$SepetSifirlamaSorgusu->execute([0, 0, "", 0, $KullaniciId])
+  $SepetSifirlamaSorgusu = $VeritabaniBaglantisi->prepare( "UPDATE sepet SET AdresId= ?, KargoId = ?, OdemeSecimi = ?, TaksitSecimi = ? WHERE UyeId = ?" );
+  $SepetSifirlamaSorgusu->execute( [ 0, 0, "", 0, $KullaniciId ] )
 
   ?>
 <table width="1065"   align="center" border="0" cellpadding="0" cellspacing="0">
@@ -54,11 +54,11 @@ $SepetSifirlamaSorgusu->execute([0, 0, "", 0, $KullaniciId])
         if ( $SepettekiUrunSayisi > 0 ) {
           $SepettekiToplamUrunSayisi = 0;
           $SepettekiToplamFiyat = 0;
-			
+
           foreach ( $SepettekiKayitlar as $SepetSatirlari ) {
             $SepetIdsi = $SepetSatirlari[ "id" ];
             $SepettekiUrununIdsi = $SepetSatirlari[ "UrunId" ];
-			$SepettekiUrununVaryantIdsi	=$SepetSatirlari["VaryantId"];
+            $SepettekiUrununVaryantIdsi = $SepetSatirlari[ "VaryantId" ];
             $SepettekiUrununAdedi = $SepetSatirlari[ "UrunAdedi" ];
 
             $UrunBilgileriSorgusu = $VeritabaniBaglantisi->prepare( "Select * from urunler where id=? LIMIT 1" );
@@ -73,7 +73,7 @@ $SepetSifirlamaSorgusu->execute([0, 0, "", 0, $KullaniciId])
             $UrununParaBirimi = $UrunKaydi[ "ParaBirimi" ];
 
             $UrunVaryantBilgileriSorgusu = $VeritabaniBaglantisi->prepare( "Select * from urunvaryanlari where id=? LIMIT 1" );
-            $UrunVaryantBilgileriSorgusu->execute( [$SepettekiUrununVaryantIdsi ] );
+            $UrunVaryantBilgileriSorgusu->execute( [ $SepettekiUrununVaryantIdsi ] );
             $VaryanKaydi = $UrunVaryantBilgileriSorgusu->fetch( PDO::FETCH_ASSOC );
             $UrununStokAdedi = $VaryanKaydi[ "StokAdedi" ];
 
@@ -127,8 +127,8 @@ $SepetSifirlamaSorgusu->execute([0, 0, "", 0, $KullaniciId])
         <?php
         }
         } else {
-					$SepettekiToplamUrunSayisi	=	0;
-					$SepettekiToplamFiyat		=	0;
+          $SepettekiToplamUrunSayisi = 0;
+          $SepettekiToplamFiyat = 0;
           ?>
         <tr height="30">
           <td  valign="bottom" align="left">Alışveriş Sepetinizde Ürün Bulunmamaktadır</td>
@@ -155,7 +155,9 @@ $SepetSifirlamaSorgusu->execute([0, 0, "", 0, $KullaniciId])
           <td  align="right" style="font-size: 25px; font-weight: bold;"><?php echo FiyatBicimlendir($SepettekiToplamFiyat); ?></td>
         </tr>
         <tr>
-          <td><a href="index.php?SK=98" style="color: white; font-size: 20px; font-weight: bold;text-decoration: none;"><div class="SepetIciDevamEtVeAlisverisiTamamlaButonu"><img src="Resimler/SepetBeyaz21x20.png" border="0" style="margin-top: 5px; "> DEVAM ET</div></a></td>
+          <td><a href="index.php?SK=98" style="color: white; font-size: 20px; font-weight: bold;text-decoration: none;">
+            <div class="SepetIciDevamEtVeAlisverisiTamamlaButonu"><img src="Resimler/SepetBeyaz21x20.png" border="0" style="margin-top: 5px; "> DEVAM ET</div>
+            </a></td>
         </tr>
       </table></td>
   </tr>

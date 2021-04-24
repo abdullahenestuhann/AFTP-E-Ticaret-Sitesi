@@ -130,40 +130,40 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
                 $SutunAdetSayisi = 4;
 
 
-						foreach($UrunKayitlari as $Kayit){
-							$UrununFiyati		=	DonusumleriGeriDondur($Kayit["UrunFiyati"]);
-							$UrununParaBirimi	=	DonusumleriGeriDondur($Kayit["ParaBirimi"]);
-							
-							if($UrununParaBirimi=="USD"){
-								$UrunFiyatiHesapla	=	$UrununFiyati*$DolarKuru;
-							}elseif($UrununParaBirimi=="EUR"){
-								$UrunFiyatiHesapla	=	$UrununFiyati*$EuroKuru;
-							}else{
-								$UrunFiyatiHesapla	=	$UrununFiyati;
-							}
-							
-							$UrununToplamYorumSayisi	=	DonusumleriGeriDondur($Kayit["YorumSayisi"]);
-							$UrununToplamYorumPuani		=	DonusumleriGeriDondur($Kayit["ToplamYorumPuani"]);
-							
-							if($UrununToplamYorumSayisi>0){
-								$PuanHesapla			=	number_format($UrununToplamYorumPuani/$UrununToplamYorumSayisi, 2, ".", "");
-							}else{
-								$PuanHesapla			=	0;
-							}
-							
-							if($PuanHesapla==0){
-								$PuanResmi	=	"YildizCizgiliBos.png";
-							}elseif(($PuanHesapla>0) and ($PuanHesapla<=1)){
-								$PuanResmi	=	"YildizCizgiliBirDolu.png";
-							}elseif(($PuanHesapla>1) and ($PuanHesapla<=2)){
-								$PuanResmi	=	"YildizCizgiliIkiDolu.png";
-							}elseif(($PuanHesapla>2) and ($PuanHesapla<=3)){
-								$PuanResmi	=	"YildizCizgiliUcDolu.png";
-							}elseif(($PuanHesapla>3) and ($PuanHesapla<=4)){
-								$PuanResmi	=	"YildizCizgiliDortDolu.png";
-							}elseif($PuanHesapla>4){
-								$PuanResmi	=	"YildizCizgiliBesDolu.png";
-							}
+                foreach ( $UrunKayitlari as $Kayit ) {
+                  $UrununFiyati = DonusumleriGeriDondur( $Kayit[ "UrunFiyati" ] );
+                  $UrununParaBirimi = DonusumleriGeriDondur( $Kayit[ "ParaBirimi" ] );
+
+                  if ( $UrununParaBirimi == "USD" ) {
+                    $UrunFiyatiHesapla = $UrununFiyati * $DolarKuru;
+                  } elseif ( $UrununParaBirimi == "EUR" ) {
+                    $UrunFiyatiHesapla = $UrununFiyati * $EuroKuru;
+                  } else {
+                    $UrunFiyatiHesapla = $UrununFiyati;
+                  }
+
+                  $UrununToplamYorumSayisi = DonusumleriGeriDondur( $Kayit[ "YorumSayisi" ] );
+                  $UrununToplamYorumPuani = DonusumleriGeriDondur( $Kayit[ "ToplamYorumPuani" ] );
+
+                  if ( $UrununToplamYorumSayisi > 0 ) {
+                    $PuanHesapla = number_format( $UrununToplamYorumPuani / $UrununToplamYorumSayisi, 2, ".", "" );
+                  } else {
+                    $PuanHesapla = 0;
+                  }
+
+                  if ( $PuanHesapla == 0 ) {
+                    $PuanResmi = "YildizCizgiliBos.png";
+                  } elseif ( ( $PuanHesapla > 0 )and( $PuanHesapla <= 1 ) ) {
+                    $PuanResmi = "YildizCizgiliBirDolu.png";
+                  } elseif ( ( $PuanHesapla > 1 )and( $PuanHesapla <= 2 ) ) {
+                    $PuanResmi = "YildizCizgiliIkiDolu.png";
+                  } elseif ( ( $PuanHesapla > 2 )and( $PuanHesapla <= 3 ) ) {
+                    $PuanResmi = "YildizCizgiliUcDolu.png";
+                  } elseif ( ( $PuanHesapla > 3 )and( $PuanHesapla <= 4 ) ) {
+                    $PuanResmi = "YildizCizgiliDortDolu.png";
+                  } elseif ( $PuanHesapla > 4 ) {
+                    $PuanResmi = "YildizCizgiliBesDolu.png";
+                  }
 
                   ?>
                 <td width="191" valign="top"><table width="191"  align="left"  border="0"  cellpadding="0" cellspacing="0" style=" margin-bottom:10px">
@@ -181,10 +181,8 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
                     </tr>
                     <tr height="25">
                       <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"><img src="Resimler/<?php echo $PuanResmi;?>" border="0"</a></td>
-					<tr height="25">
-                      <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#1515CB;font-weight: bold;text-decoration: none; ">
-                         <?php echo FiyatBicimlendir($UrunFiyatiHesapla)?>TL
-                        </a></td>
+                    <tr height="25">
+                      <td width="191" align="center"><a href="index.php?SK=83&ID=<?php echo DonusumleriGeriDondur($Kayit["id"]);?>"style="color:#1515CB;font-weight: bold;text-decoration: none; "> <?php echo FiyatBicimlendir($UrunFiyatiHesapla)?>TL </a></td>
                     </tr>
                     <!-- çerçeveli kulanılıcaksa
 					 <tr height="25">

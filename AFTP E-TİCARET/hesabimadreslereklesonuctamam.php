@@ -11,7 +11,5 @@
 		 </tr>
 		<td class="SonucSayfalari" align="center">Anasayfaya dönmek için lütfen buraya <a href="index.php"><b>tıklayınız</b></a></td>		
 		 </tr>
-
-
-			 
+		 
 </table>
