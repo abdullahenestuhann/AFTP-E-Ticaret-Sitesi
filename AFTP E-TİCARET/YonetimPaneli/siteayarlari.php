@@ -129,7 +129,7 @@ if(isset($_SESSION["Yonetici"])){
 				<tr height="40">
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
-					<td><input type="submit" value="Ayarları Kaydet" class="YesilButon"></td>
+					<td><input type="submit" value="Ayarları Kaydet" class="KirmiziButon"></td>
 				</tr>
 			</table></td>
 		</tr>
