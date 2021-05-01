@@ -25,7 +25,7 @@ $SayfaIc[ 13 ] = "bankahesaplarieklesonuchata.php";
 $SayfaIc[ 16 ] = "bankahesaplariguncellesonuctamam.php";
 $SayfaIc[ 17 ] = "bankahesaplariguncellesonuchata.php";
 
-			$SayfaIc[ 18 ] = "bankahesaplarisilsonuc.php";
+$SayfaIc[ 18 ] = "bankahesaplarisilsonuc.php";
 $SayfaIc[ 19 ] = "bankahesaplarisilsonuctamam.php";
 $SayfaIc[ 20 ] = "bankahesaplarisilsonuchata.php";
 
