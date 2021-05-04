@@ -184,7 +184,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
         <tr height="30">
           <td class="AltMenu">&nbsp;<a href="index.php?SK=14">Kargom Nerede<a/></td>
           <td>&nbsp;</td>
-          <td class="AltMenu">&nbsp;<a href="YonetimPaneli/index.php">Yönetici Girişi<a/></td>
+          <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td class="AltMenu"><a href="index.php?SK=5">Mesafeli Satış Sözleşmesi<a/></td>
           <td>&nbsp;</td>

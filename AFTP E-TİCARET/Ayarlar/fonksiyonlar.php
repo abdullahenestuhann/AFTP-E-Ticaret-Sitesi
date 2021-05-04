@@ -1,12 +1,11 @@
 <?php
-$IPAdresi				    =	$_SERVER["REMOTE_ADDR"];
-$ZamanDamgasi			    =	time();
-$TarihSaat				    =	date("d.m.Y H:i:s", $ZamanDamgasi);
-$SiteKokDizini			    =	$_SERVER["DOCUMENT_ROOT"];
-$ResimKlasoruYolu		    =	"/php/Resimler/";
-$BannerKlasoruYolu		    =	"/php/Oluşumlar/BannerOrnekleri/";
-$VerotIcinKlasorYolu	    =	$SiteKokDizini.$ResimKlasoruYolu;
-$VerotBannerIcinKlasorYolu	=	$SiteKokDizini.$BannerKlasoruYolu;
+$IPAdresi				=	$_SERVER["REMOTE_ADDR"];
+$ZamanDamgasi			=	time();
+$TarihSaat				=	date("d.m.Y H:i:s", $ZamanDamgasi);
+$SiteKokDizini			=	$_SERVER["DOCUMENT_ROOT"];
+$ResimKlasoruYolu		=	"/php/Resimler/";
+$VerotIcinKlasorYolu	=	$SiteKokDizini.$ResimKlasoruYolu;
+
 function TarihBul($Deger){
 	$Cevir				=	date("d.m.Y H:i:s", $Deger);
 	$Sonuc				=	$Cevir;
