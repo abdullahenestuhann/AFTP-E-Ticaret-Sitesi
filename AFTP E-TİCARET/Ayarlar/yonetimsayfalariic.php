@@ -42,31 +42,41 @@ $SayfaIc[ 28 ] = "kargolarguncellesonuctamam.php";
 $SayfaIc[ 29 ] = "kargolarguncellesonuchata.php";
 $SayfaIc[ 30 ] = "kargolarsilsonuc.php";
 $SayfaIc[ 31 ] = "kargolarsilsonuctamam.php";
-$SayfaIc[ 32 ] = "kargolarsilsonuchata.php";                
-$SayfaIc[ 33 ] = ".php";
-$SayfaIc[ 34 ] = ".php";
-$SayfaIc[ 35 ] = ".php";
-$SayfaIc[ 36 ] = ".php";
-$SayfaIc[ 37 ] = ".php";
-$SayfaIc[ 38 ] = ".php";
-$SayfaIc[ 39 ] = ".php";
-$SayfaIc[ 40 ] = ".php";
-$SayfaIc[ 41 ] = ".php";
-$SayfaIc[ 42 ] = ".php";
-$SayfaIc[ 43 ] = ".php";
-$SayfaIc[ 44 ] = ".php";
-$SayfaIc[ 45 ] = ".php";
-$SayfaIc[ 46 ] = ".php";
-$SayfaIc[ 47 ] = ".php";
-$SayfaIc[ 48 ] = ".php";
-$SayfaIc[ 49 ] = ".php";
-$SayfaIc[ 50 ] = ".php";
-$SayfaIc[ 51 ] = ".php";
-$SayfaIc[ 52 ] = ".php";
-$SayfaIc[ 53 ] = ".php";
-$SayfaIc[ 54 ] = ".php";
-$SayfaIc[ 55 ] = ".php";
-$SayfaIc[ 56 ] = ".php";
+$SayfaIc[ 32 ] = "kargolarsilsonuchata.php"; 
+
+
+
+$SayfaIc[ 33 ] = "bannerlar.php";
+$SayfaIc[ 34 ] = "bannerlarekle.php";
+$SayfaIc[ 35 ] = "bannerlareklesonuc.php";
+$SayfaIc[ 36 ] = "bannerlareklesonuctamam.php";
+$SayfaIc[ 37 ] = "bannerlareklesonuchata.php";
+$SayfaIc[ 38 ] = "bannerlarguncelle.php";
+$SayfaIc[ 39 ] = "bannerlarguncellesonuc.php";
+$SayfaIc[ 40 ] = "bannerlarguncellesonuctamam.php";
+$SayfaIc[ 41 ] = "bannerlarguncellesonuchata.php";
+$SayfaIc[ 42 ] = "bannerlarsilsonuc.php";
+$SayfaIc[ 43 ] = "bannerlarsilsonuctamam.php";
+$SayfaIc[ 44 ] = "bannerlarsilsonuchata.php";
+
+
+
+
+$SayfaIc[ 45 ] = "destekkayitlari.php";
+$SayfaIc[ 46 ] = "destekkayitlariekle.php";
+$SayfaIc[ 47 ] = "destekkayitlarieklesonuc.php";
+$SayfaIc[ 48 ] = "destekkayitlarieklesonuctamam.php";
+$SayfaIc[ 49 ] = "destekkayitlarieklesonuchata.php";
+
+$SayfaIc[ 50 ] = "destekkayitlariguncelle.php";
+$SayfaIc[ 51 ] = "destekkayitlariguncellesonuc.php";
+$SayfaIc[ 52 ] = "destekkayitlariguncellesonuctamam.php";
+$SayfaIc[ 53 ] = "destekkayitlariguncellesonuchata.php";
+
+
+$SayfaIc[ 54 ] = "destekkayitlarisilsonuc.php";
+$SayfaIc[ 55 ] = "destekkayitlarisilsonuctamam.php";
+$SayfaIc[ 56 ] = "destekkayitlarisilsonuchata.php";
 $SayfaIc[ 57 ] = ".php";
 $SayfaIc[ 58 ] = ".php";
 $SayfaIc[ 59 ] = ".php";

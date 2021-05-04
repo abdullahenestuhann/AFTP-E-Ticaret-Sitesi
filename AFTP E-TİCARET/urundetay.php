@@ -149,7 +149,7 @@ if ( isset( $_GET[ "ID" ] ) ) {
         <td><table width="705"   align="center" border="0" cellpadding="0" cellspacing="0">
             <tr height="30">
               <td><img src="Resimler/SaatEsnetikGri20x20.png" border="0" style="margin-top: 5px; "</td>
-              <td><b>Siparişiniz <?php echo UcGunİleriTarihBul();?> tarihine kadar kargoya verilecektir.</b></td>
+              <td><b>Siparişiniz <?php echo UcGunIleriTarihBul(); ?> tarihine kadar kargoya verilecektir.</b></td>
             </tr>
             <tr height="30">
               <td><img src="Resimler/SaatHizCizgiliLacivert20x20.png" border="0" style="margin-top: 5px; "</td>

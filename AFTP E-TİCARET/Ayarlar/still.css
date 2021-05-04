@@ -28,7 +28,7 @@ html, body {
 .AnaMenu a:link, .AnaMenu a:active, .AnaMenu a:visited, .AnaMenu a:hover {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
   font-size: 14px;
-  color: #646464;
+  color: #FF930B;
   line-height: 1.5;
   font-style: normal;
   font-variant: normal;
@@ -38,7 +38,7 @@ html, body {
 .AltMenu a:link, .AltMenu a:active, .AltMenu a:visited, .AltMenu a:hover {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
   font-size: 14px;
-  color: #646464;
+  color: #FF930B;
   line-height: 1.5;
   font-style: normal;
   font-variant: normal;

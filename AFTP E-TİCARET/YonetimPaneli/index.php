@@ -41,7 +41,7 @@ if(isset($_REQUEST["SYF"])){
 
 <body>
 	<table width="1065" height="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-		<tr height="100%">
+		<tr height="100%" >
 			<td align="center"><?php
 				if(empty($_SESSION["Yonetici"])){
 					if((!$DisSayfaKoduDegeri) or ($DisSayfaKoduDegeri=="") or ($DisSayfaKoduDegeri==0)){

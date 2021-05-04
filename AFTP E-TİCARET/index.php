@@ -46,7 +46,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
   </tr>
   <tr height="110">
     <td><table width="1065" height="30%"  align="center" border="0" cellpadding="0" cellspacing="0">
-        <tr bgcolor="#0088CC">
+        <tr bgcolor="#FF3F00">
           <td>&nbsp;</td>
           <?php
           if ( isset( $_SESSION[ "Kullanici" ] ) ) {
@@ -74,10 +74,10 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
             <?php } ?></td>
         </tr>
       </table>
-      <table width="1065" height="80%"  align="center" border="0" cellpadding="0" cellspacing="0">
+      <table  bgcolor="#646464" width="1065" height="80%"  align="center" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="192"><a href="index.php?"><img src="Resimler/<?php echo DonusumleriGeriDondur($SiteLogosu)?>"border="0"><a/></td>
-          <td><table width="873" height="30%"  align="center" border="0" cellpadding="0" cellspacing="0">
+          <td><table width="873" height="30%"  align="center" border="0" cellpadding="0" cellspacing="0"> 
               <tr>
                 <td width="523" class="AnaMenu">&nbsp;</td>
                 <td width="100" class="AnaMenu"><a href="index.php?SK=0">Anasayfa<a/></td>
@@ -184,7 +184,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
         <tr height="30">
           <td class="AltMenu">&nbsp;<a href="index.php?SK=14">Kargom Nerede<a/></td>
           <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td class="AltMenu">&nbsp;<a href="YonetimPaneli/index.php">Yönetici Girişi<a/></td>
           <td>&nbsp;</td>
           <td class="AltMenu"><a href="index.php?SK=5">Mesafeli Satış Sözleşmesi<a/></td>
           <td>&nbsp;</td>

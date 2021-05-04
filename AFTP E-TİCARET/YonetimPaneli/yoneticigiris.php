@@ -2,8 +2,16 @@
 if ( empty( $_SESSION[ "Yonetici" ] ) ) {
 ?>
 <form action="index.php?SKD=2" method="post">
+    
+	<table width="1065"  align="center" border="0" cellpadding="0" cellspacing="0"style="border: 1px solid #000000; padding:  30px;">
+    <tr height="10">
+		<td colspan="4"  align="center" width="110"class="InputAlanlari"><img src="../Resimler/yoneticigrisi.png"</td>
 
-<table width="500"  align="center" border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #000000; padding:  30px;">
+	</tr>
+    <tr height="85">
+        <td  colspan="4" align="center" width="250" style="color: #FD6E00; font-size: 30px;">YÖNETİCİ GİRİŞ SAYFASI</td>  
+	</tr>
+
 	<tr height="35">
 		<td align="left" width="150">Yönetici Kullanıcı Adı</td>
 		<td align="left" width="50">:</td>
