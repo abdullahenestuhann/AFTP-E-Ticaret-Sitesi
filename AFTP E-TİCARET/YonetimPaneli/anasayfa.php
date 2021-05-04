@@ -58,8 +58,7 @@ if ( isset( $_SESSION[ "Yonetici" ] ) ) {
     <td width="760" align="center"valign="top"><?php
 				if((!$IcSayfaKoduDegeri) or ($IcSayfaKoduDegeri=="") or ($IcSayfaKoduDegeri==0)){
 					include($SayfaIc[0]);
-						echo $SiteKokDizini;
-	die();
+				
 				}else{
 					include($SayfaIc[$IcSayfaKoduDegeri]);
 				}					
