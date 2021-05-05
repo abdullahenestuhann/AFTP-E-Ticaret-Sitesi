@@ -39,10 +39,9 @@ $AnaMenununTumUrunSayiSorgusu = $AnaMenununTumUrunSayiSorgusu->fetch( PDO::FETCH
       <tr>
       
       <td><table  width="250"   align="center" border="0" cellpadding="0" cellspacing="0">
-          <tr height="45">
+          <tr height="40">
             <td bgcolor="#F1F1F1"><b>&nbsp;MENÜLER</b></td>
           </tr>
-          <tr height="30">
           <tr height="30">
             <td><a href="index.php?SK=85" style="text-decoration: none; <?php if($GelenMenuId==""){ ?>color: #FF9900;<? }else{ ?>color: #646464;<?php } ?> font-weight: bold;">&nbsp;Tüm Ürünler (<?php echo $AnaMenununTumUrunSayiSorgusu["MenununToplamUrunu"]; ?>)</a></td>
           </tr>
