@@ -106,14 +106,20 @@ $SayfaIc[ 79 ] = "yoneticilersilsonuc.php";
 $SayfaIc[ 80 ] = "yoneticilersilsonuctamam.php";
 $SayfaIc[ 81 ] = "yoneticilersilsonuchata.php";
 
-$SayfaIc[ 82 ] = ".php";
-$SayfaIc[ 83 ] = ".php";
-$SayfaIc[ 84 ] = ".php";
-$SayfaIc[ 85 ] = ".php";
-$SayfaIc[ 87 ] = ".php";
-$SayfaIc[ 88 ] = ".php";
-$SayfaIc[ 89 ] = ".php";
-$SayfaIc[ 90 ] = ".php";
+
+
+$SayfaIc[ 82 ] = "uyeler.php";
+
+$SayfaIc[ 83 ] = "uyelersilinmis.php";
+$SayfaIc[ 84 ] = "uyelersilsonuc.php";
+$SayfaIc[ 85 ] = "uyelersilsonuctamam.php";
+$SayfaIc[ 87 ] = "uyelersilsonuchata.php";
+
+
+$SayfaIc[ 88 ] = "uyelergeriacsonuc.php";
+$SayfaIc[ 89 ] = "uyelergeriacsonuctamam.php";
+$SayfaIc[ 90 ] = "uyelergeriacsonuchata.php";
+
 $SayfaIc[ 91 ] = ".php";
 $SayfaIc[ 92 ] = ".php";
 $SayfaIc[ 93 ] = ".php";
