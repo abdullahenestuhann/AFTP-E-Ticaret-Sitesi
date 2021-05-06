@@ -1,10 +1,9 @@
 <?php
-        $SayfaIc[ 0 ] = "pano.php";
+$SayfaIc[ 0 ] = "pano.php";
 $SayfaIc[ 1 ] = "siteayarlari.php";
 $SayfaIc[ 2 ] = "siteayarlarisonuc.php";
 $SayfaIc[ 3 ] = "siteayarlarisonuctamam.php";
 $SayfaIc[ 4 ] = "siteayarlarisonuchata.php";
-
 
 
 $SayfaIc[ 5 ] = "sozlesmelervemetinler.php";
@@ -30,7 +29,6 @@ $SayfaIc[ 19 ] = "bankahesaplarisilsonuctamam.php";
 $SayfaIc[ 20 ] = "bankahesaplarisilsonuchata.php";
 
 
-
 $SayfaIc[ 21 ] = "kargolar.php";
 $SayfaIc[ 22 ] = "kargolarekle.php";
 $SayfaIc[ 23 ] = "kargolareklesonuc.php";
@@ -42,8 +40,7 @@ $SayfaIc[ 28 ] = "kargolarguncellesonuctamam.php";
 $SayfaIc[ 29 ] = "kargolarguncellesonuchata.php";
 $SayfaIc[ 30 ] = "kargolarsilsonuc.php";
 $SayfaIc[ 31 ] = "kargolarsilsonuctamam.php";
-$SayfaIc[ 32 ] = "kargolarsilsonuchata.php"; 
-
+$SayfaIc[ 32 ] = "kargolarsilsonuchata.php";
 
 
 $SayfaIc[ 33 ] = "bannerlar.php";
@@ -58,8 +55,6 @@ $SayfaIc[ 41 ] = "bannerlarguncellesonuchata.php";
 $SayfaIc[ 42 ] = "bannerlarsilsonuc.php";
 $SayfaIc[ 43 ] = "bannerlarsilsonuctamam.php";
 $SayfaIc[ 44 ] = "bannerlarsilsonuchata.php";
-
-
 
 
 $SayfaIc[ 45 ] = "destekkayitlari.php";
@@ -96,19 +91,21 @@ $SayfaIc[ 65 ] = "menulerguncellesonuchata.php";
 $SayfaIc[ 66 ] = "menulersilsonuc.php";
 $SayfaIc[ 67 ] = "menulersilsonuctamam.php";
 $SayfaIc[ 68 ] = "menulersilsonuchata.php";
-$SayfaIc[ 69 ] = ".php";
-$SayfaIc[ 70 ] = ".php";
-$SayfaIc[ 71 ] = ".php";
-$SayfaIc[ 72 ] = ".php";
-$SayfaIc[ 73 ] = ".php";
-$SayfaIc[ 74 ] = ".php";
-$SayfaIc[ 75 ] = ".php";
-$SayfaIc[ 76 ] = ".php";
-$SayfaIc[ 77 ] = ".php";
-$SayfaIc[ 78 ] = ".php";
-$SayfaIc[ 79 ] = ".php";
-$SayfaIc[ 80 ] = ".php";
-$SayfaIc[ 81 ] = ".php";
+
+$SayfaIc[ 69 ] = "yoneticiler.php";
+$SayfaIc[ 70 ] = "yoneticilerekle.php";
+$SayfaIc[ 71 ] = "yoneticilereklesonuc.php";
+$SayfaIc[ 72 ] = "yoneticilereklesonuctamam.php";
+$SayfaIc[ 73 ] = "yoneticilereklesonuchata.php";
+$SayfaIc[ 74 ] = "yoneticilereklesonuceskayit.php";
+$SayfaIc[ 75 ] = "yoneticilerguncelle.php";
+$SayfaIc[ 76 ] = "yoneticilerguncellesonuc.php";
+$SayfaIc[ 77 ] = "yoneticilerguncellesonuctamam.php";
+$SayfaIc[ 78 ] = "yoneticilerguncellesonuchata.php";
+$SayfaIc[ 79 ] = "yoneticilersilsonuc.php";
+$SayfaIc[ 80 ] = "yoneticilersilsonuctamam.php";
+$SayfaIc[ 81 ] = "yoneticilersilsonuchata.php";
+
 $SayfaIc[ 82 ] = ".php";
 $SayfaIc[ 83 ] = ".php";
 $SayfaIc[ 84 ] = ".php";

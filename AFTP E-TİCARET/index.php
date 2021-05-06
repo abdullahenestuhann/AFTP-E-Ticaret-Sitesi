@@ -46,7 +46,7 @@ if ( isset( $_REQUEST[ "SYF" ] ) ) {
   </tr>
   <tr height="110">
     <td><table width="1065" height="30%"  align="center" border="0" cellpadding="0" cellspacing="0">
-        <tr bgcolor="#FF3F00">
+        <tr bgcolor="#FF3F00"> 
           <td>&nbsp;</td>
           <?php
           if ( isset( $_SESSION[ "Kullanici" ] ) ) {
