@@ -120,18 +120,25 @@ $SayfaIc[ 91 ] = "yorumlarsilsonuc.php";
 $SayfaIc[ 92 ] = "yorumlarsilsonuctamam.php";
 $SayfaIc[ 93 ] = "yorumlarsilsonuchata.php";
 
-$SayfaIc[ 94 ] = ".php";
-$SayfaIc[ 95 ] = ".php";
-$SayfaIc[ 96 ] = ".php";
-$SayfaIc[ 97 ] = ".php";
-$SayfaIc[ 98 ] = ".php";
-$SayfaIc[ 99 ] = ".php";
-$SayfaIc[ 100 ] = ".php";
-$SayfaIc[ 101 ] = ".php";
-$SayfaIc[ 102 ] = ".php";
-$SayfaIc[ 103 ] = ".php";
-$SayfaIc[ 104 ] = ".php";
-$SayfaIc[ 105 ] = ".php";
+$SayfaIc[ 94 ] = "urunler.php";
+
+$SayfaIc[ 95 ] = "urunlerekle.php";
+$SayfaIc[ 96 ] = "urunlereklesonuc.php";
+$SayfaIc[ 97 ] = "urunlereklesonuctamam.php";
+$SayfaIc[ 98 ] = "urunlereklesonuchata.php";
+
+$SayfaIc[ 99 ] = "urunlerguncelle.php";
+$SayfaIc[ 100 ] = "urunlerguncellesonuc.php";
+$SayfaIc[ 101 ] = "urunlerguncellesonuctamam.php";
+$SayfaIc[ 102 ] = "urunlerguncellesonuchata.php";
+
+
+
+$SayfaIc[ 103 ] = "urunlersilsonuc.php";
+$SayfaIc[ 104 ] = "urunlersilsonuctamam.php";
+$SayfaIc[ 105 ] = "urunlersilsonuchata.php";
+
+
 $SayfaIc[ 106 ] = ".php";
 
 
