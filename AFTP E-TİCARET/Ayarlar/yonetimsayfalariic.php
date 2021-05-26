@@ -133,13 +133,21 @@ $SayfaIc[ 101 ] = "urunlerguncellesonuctamam.php";
 $SayfaIc[ 102 ] = "urunlerguncellesonuchata.php";
 
 
-
 $SayfaIc[ 103 ] = "urunlersilsonuc.php";
 $SayfaIc[ 104 ] = "urunlersilsonuctamam.php";
 $SayfaIc[ 105 ] = "urunlersilsonuchata.php";
 
 
-$SayfaIc[ 106 ] = ".php";
+$SayfaIc[ 106 ] = "siparisler.php";
+$SayfaIc[ 107 ] = "siparisdetay.php";
+$SayfaIc[ 108 ] = "siparislertamamlanan.php";
+$SayfaIc[ 109 ] = "siparislertamamlanandetay.php";
+$SayfaIc[ 110 ] = "sipariskargokodugirissonuc.php";
+$SayfaIc[ 111 ] = "sipariskargokodugirissonuctamam.php";
+$SayfaIc[ 112 ] = "sipariskargokodugirissonuchata.php";
+$SayfaIc[ 113 ] = "siparissilsonuc.php";
+$SayfaIc[ 114 ] = "siparissilsonuctamam.php";
+$SayfaIc[ 115 ] = "siparissilsonuchata.php";
 
 
 ?>
